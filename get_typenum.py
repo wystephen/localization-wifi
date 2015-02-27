@@ -1,7 +1,7 @@
 __author__ = 'steve'
 #-*- coding:utf-8 -*-
 
-#赵克罗
+#
 
 import os
 import sys

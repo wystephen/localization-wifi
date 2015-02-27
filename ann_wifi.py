@@ -6,13 +6,14 @@ from pybrain.supervised.trainers import BackpropTrainer
 from pybrain.datasets import  SupervisedDataSet
 import numpy
 from pybrain.tools.shortcuts import buildNetwork
-net = buildNetwork(165,20,2)
+from pybrain.utilities import percentError
+net = buildNetwork(164,12,2)
 #建立神经网络
 n = FeedForwardNetwork()
 #确定神经网络形式
-inLayer = LinearLayer(165)
-hiddenLayer = SigmoidLayer(20)
-hiddenLayer2 = TanhLayer(15)
+inLayer = LinearLayer(164)
+hiddenLayer = SigmoidLayer(15)
+hiddenLayer2 = TanhLayer(10)
 outLayer = LinearLayer(2)
 
 in_to_hidden = FullConnection(inLayer,hiddenLayer)
@@ -30,29 +31,12 @@ n.addConnection(hidden2_to_outLayer)
 
 print n
 #数据加载方法——数据集
-data = SupervisedDataSet(165, 2)#  (输入数据个数，输出数据个数）
+data = SupervisedDataSet(164, 2)#  (输入数据个数，输出数据个数）
 #添加数据到数据集用方法：data.addSample(inp,target)
-fp = open('wifi_end.txt','rb')
-wifi_list = fp.readlines()
-fp.close()
-fp= open('pose.txt','rb')
-pose_list = fp.readlines()
-fp.close()
-
-wifi_array = numpy.zeros([len(wifi_list), 165])
-for line in wifi_list:
-    li = line.split(' ')
-    for i in range(0, 164):
-        wifi_array[wifi_list.index(line), i] = int(li[i])
-pose_array = numpy.zeros([len(pose_list), 2])
-for line in pose_list:
-    li = line.split(' ')
-    pose_array[pose_list.index(line),0] = float(li[0])
-    pose_array[pose_list.index(line),1] = float(li[1])
-for i in range(0, 2001):
-    data.addSample((wifi_array[i,:]), (pose_array[i, :]))
-pose_array = numpy.load('pose.txt')
-wifi_array=numpy.load('wifi_end.txt')
+wifi = numpy.loadtxt('wifi_end.txt')
+pose = numpy.loadtxt('pose.txt')
+for i in range(0, 2379):
+    data.appendLinked((wifi[i,:]),(pose[i,:]))
 
 #添加划分训练集和测试集：
 testdata, traindata = data.splitWithProportion(0.25)
@@ -64,13 +48,20 @@ testdata, traindata = data.splitWithProportion(0.25)
 #                          irdecacy = 1.0, momentum=0.0,
 #                          verbose=False, batchlearning=False,
 #                          weightdecay = 0.0)
-trainer = BackpropTrainer(n, traindata)
+trainer = BackpropTrainer(net, traindata)
 notok = True
 while notok:
-    print trainer.train()
+    the = 5
+    if the == 0:
+        notok = False
+    else:
+       print  trainer.trainEpochs(int(the))
+       print  trainer.train()
+       print trainer.testOnData(testdata)
+       if trainer.testOnData(testdata) < 50:
+           break
 
 #训练直道收敛
 #trainer.trainUntilConvergence()
 
 #从神经网络输出
-outdata = n.activate(testdata)

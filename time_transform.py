@@ -1,5 +1,5 @@
 __author__ = 'steve'
-# -*- coding:utf-8 -*-
+# -*- coding:utf_8 -*-
 
 import os, sys, time, numpy
 

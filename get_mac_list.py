@@ -1,5 +1,5 @@
 __author__ = 'steve'
-# -*- coding: utf-8 -*-
+# -*- coding: utf_8 -*-
 
 import sys, os
 def get_mac_list(wifi_file,blue_file='null'):

@@ -48,7 +48,7 @@ testdata, traindata = data.splitWithProportion(0.25)
 #                          irdecacy = 1.0, momentum=0.0,
 #                          verbose=False, batchlearning=False,
 #                          weightdecay = 0.0)
-trainer = BackpropTrainer(net, traindata)
+trainer = BackpropTrainer(net, traindata,learningrate=0.02,verbose=False,weightdecay=0.01)
 notok = True
 while notok:
     the = 5
@@ -58,7 +58,7 @@ while notok:
        print  trainer.trainEpochs(int(the))
        print  trainer.train()
        print trainer.testOnData(testdata)
-       if trainer.testOnData(testdata) < 50:
+       if trainer.testOnData(testdata) < 100:
            break
 
 #训练直道收敛

@@ -4,7 +4,7 @@ __author__ = 'steve'
 
 import os
 import sys
-import numpy, scipy
+import numpy, scipy, time
 
 def pose_to_label(pose, distance):
     last_i = 0
@@ -25,25 +25,100 @@ def pose_to_label(pose, distance):
     print 'lable_in' , label
     return label, label_dict
 
-'''
-infile = open('pose.txt')
-laser_list = infile.readlines()
-infile.close()
-label_list = list
-step = 0
-pose_array = numpy.zeros((len(laser_list),2))
-for line in laser_list:
-    line =  line.split(' ')
-    pose_array[step, 0] = line[0]
-    pose_array[step, 1] = line[1]
-    step += 1
+def get_mac_list(wifi_file,blue_file='null'):
+    fp = open(wifi_file,'rb')
+    read = fp.readlines()
+    fp.close()
+    mac_list = list()
+    for line in read:
+        if (len(line.split(':')) > 4):
+            mac_tmp = line.split(' ')
+            if mac_tmp[0] not in mac_list:
+                mac_list.append(mac_tmp[0])
+    fp = open('mac_list.txt', 'w')
+    for mac in mac_list:
+        fp.write((mac + '\n'))
 
-print len(pose_array), step
+    if blue_file != 'null':
+        f = open(blue_file, 'rb')
+        read = f.readlines()
+        f.close()
+        blist = list()
+        for line in read:
+            if(len(line.split(':'))>4):
+                blue_tmp = line.split(' ')
+                if blue_tmp[0] not in blist:
+                    blist.append(blue_tmp[0])
+        for mac in blist:
+            fp.write((mac + '\n'))
+        print blist
+        fp.close()
+    fp = open('mac_list.txt','rb')
+    mac_list = fp.readlines()
+    fp.close()
+    return  mac_list
 
-a, adict = pose_to_label(pose_array, 1.5)
 
-fout = open('poselabel.txt','w')
-for i in range(0,len(pose_array)-1):
-    fout.write(str(int(a[i])) + '\n')
-fout.close()
-'''
+def syn_data(pose_file ,wifi_file, pose_out, wifi_out)
+    fp = open(wifi_file,'rb')
+    wifi_list = fp.readlines()
+    fp.close()
+
+    fp = open(pose_file,'rb')
+    laser_list = fp.readlines()
+    fp.close()
+    wifiout = open(wifi_out,'w')
+    poseout = open(pose_out,'w')
+    for wifi in wifi_list:
+        print wifi_list.index(wifi), ' summ', len(wifi_list)
+
+        wifi = wifi.split(' ')
+        for laser in laser_list:
+            laser = laser.split(' ')
+            if wifi[0] < laser[0]:
+                for i in range(1, len(wifi)-1):
+                    wifiout.write((wifi[i] + ' '))
+                poseout.write(laser[1] +' ' + laser[2] + '\n')
+                wifiout.write('\n')
+                break
+    wifiout.close()
+    poseout.close()
+    return
+#输入wifi文件，和mac——list文件，并且处理
+def file_trance(file, year, month, day, hours, minutes):
+    fp = open(file, 'rb')
+    wifi = fp.readlines()
+    fp.close()
+    fp = open('mac_list.txt','rb')
+    mac_list = fp.readlines()
+    fp.close()
+    fout = open('out_wifi.txt', 'w')
+    all_instance = numpy.zeros(mac_list.count())
+    first = True
+    print mac_list
+    for line in wifi:
+        if line[0] == '@':
+            continue
+        if line[0] == '#':
+            if not first:
+                for i in range(mac_list.count()):
+                    fout.write((str(int(all_instance[i])) + ' '))
+            fout .write('\n')
+            line = line.split(' ')
+            line = line[1]
+            line = line.split('-')
+            thetime = time.mktime([int(year), int(month), int(day), int(hours), int(line[0]), int(line[1]), 0, 0, 0])
+            print thetime
+            thetime = thetime + float(line[2])/1000
+            print 'thetime: ' , thetime
+            fout.write(str(thetime))
+            fout.write(' ')
+            first = False
+        else:
+            line = line.split(' ')
+            num = mac_list.index(str(line[0]) + '\n')
+            all_instance[num] =line[1]
+
+
+    return
+#file_trance('sourcedata/wifi.txt',year='2015', month='01', day='28', hours='18', minutes='11')

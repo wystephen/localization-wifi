@@ -1,7 +1,6 @@
 __author__ = 'steve'
 # -*- coding:utf-8 -*-
 from sklearn import svm
-import read_data
 import data_transfor
 import numpy
 #wifi, pose = read_data.read_data()

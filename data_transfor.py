@@ -146,5 +146,5 @@ if __name__ == '__main__':
     file_trance(wifi_file , year, month, day, hours)
     print '成功，保存转化后的wifi数据到文件 out_wifi.txt'
     print '开始下一步，同步时间轴'
-    syn_data(laser_file, wifi_file = 'out_wifi.txt', pose_out = 'end_pose.txt', wifi_out = 'end_wifi.txt')
+    syn_data(laser_file, wifi_file = 'out_wifi.txt', pose_out = data_dir + 'end_pose.txt', wifi_out = data_dir + 'end_wifi.txt')
     print '完成数据转化，保存结果到 end_pose.txt 和 end_wifi.txt'

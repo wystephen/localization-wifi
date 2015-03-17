@@ -29,15 +29,28 @@ def get_mac_list(wifi_file,blue_file='null'):
     read = fp.readlines()
     fp.close()
     mac_list = list()
+    if (os.path.exists(r'mac_list.txt')) == True:
+        fp = open('mac_list.txt','rb')
+        mac_list = fp.readlines()
+        fp.close()
     for line in read:
         if (len(line.split(':')) > 4):
             mac_tmp = line.split(' ')
+            tmp = mac_tmp[0] + '\n'
             if mac_tmp[0] not in mac_list:
                 mac_list.append(mac_tmp[0])
-    fp = open('mac_list.txt', 'w')
-    for mac in mac_list:
-        fp.write((mac + '\n'))
+                print 'add mac'
+    #mac——list 去重
 
+    fp = open('mac_list.txt', 'w')
+    mac_list_new = list()
+    for mac in mac_list:
+        if mac not in mac_list_new:
+            if mac != '':
+                mac_list_new.append(mac)
+    for mac in mac_list_new:
+        fp.write(mac + '\n')
+    fp.close()
     if blue_file != 'null':
         f = open(blue_file, 'rb')
         read = f.readlines()
@@ -90,9 +103,11 @@ def file_trance(file, year, month, day, hours):
     fp = open(file, 'rb')
     wifi = fp.readlines()
     fp.close()
-    fp = open('mac_list.txt','rb')
-    mac_list = fp.readlines()
-    fp.close()
+
+    if (os.path.exists(r'mac_list.txt')) == True:
+        fp = open('mac_list.txt','rb')
+        mac_list = fp.readlines()
+        fp.close()
     fout = open('out_wifi.txt', 'w')
     all_instance = numpy.zeros(len(mac_list)+1)
     first = True
@@ -109,19 +124,45 @@ def file_trance(file, year, month, day, hours):
             line = line[1]
             line = line.split('-')
             thetime = time.mktime([int(year), int(month), int(day), int(hours), int(line[0]), int(line[1]), 0, 0, 0])
-            print thetime
+            #print thetime
             thetime = thetime + float(line[2])/1000
-            print 'thetime: ' , thetime
+            #print 'thetime: ' , thetime
             fout.write(str(thetime))
             fout.write(' ')
             first = False
         else:
             line = line.split(' ')
-            num = mac_list.index(str(line[0]) + '\n')
-            all_instance[num] =line[1]
-
-
+            if str(line[0]) + '\n' in mac_list:
+                num = mac_list.index(str(line[0])+ '\n')
+                all_instance[num] =line[1]
     return
+def half_data_trans(end_pose,end_wifi):
+    fp = open(end_pose)
+    pose_list = fp.readlines( )
+    fp.close()
+    fp = open(end_wifi)
+    wifi_list = fp.readlines()
+    fp.close()
+
+    pose_array = numpy.loadtxt(end_pose)
+    wifi_array = numpy.loadtxt(end_wifi)
+
+    save_i = 0
+
+    for i in range(0,len(pose_list)):
+        if ((pose_array[i,0]-43)**2 + (pose_array[i,1] +54)**2 )< 2:
+            save_i = i
+            break
+
+
+    half_pose = numpy.zeros([save_i,2])
+    half_wifi = numpy.zeros([save_i,len(wifi_array[12,:])])
+
+    for i in range(0,save_i):
+        half_pose[i,:] = pose_array[i,:]
+        half_wifi[i,:] = wifi_array[i,:]
+
+    return half_pose, half_wifi
 #file_trance('sourcedata/wifi.txt',year='2015', month='01', day='28', hours='18', minutes='11')
 if __name__ == '__main__':
     print '输入文件目录：'
@@ -133,7 +174,8 @@ if __name__ == '__main__':
     wifi_file = raw_input()
     wifi_file = data_dir + wifi_file
     print '生成mac_list文件中'
-    mac_list = get_mac_list(wifi_file)
+    #mac_list = get_mac_list(wifi_file)
+    #print 'len mac_list' , len(mac_list)
     print '转变wifi 为 向量形式'
     print 'year'
     year = raw_input()

@@ -135,6 +135,9 @@ def file_trance(file, year, month, day, hours):
             if str(line[0]) + '\n' in mac_list:
                 num = mac_list.index(str(line[0])+ '\n')
                 all_instance[num] =line[1]
+            if str(line[0]) in mac_list:
+                num = mac_list.index(str(line[0]))
+                all_instance[num] = line[1]
     return
 def half_data_trans(end_pose,end_wifi):
     fp = open(end_pose)
@@ -150,7 +153,7 @@ def half_data_trans(end_pose,end_wifi):
     save_i = 0
 
     for i in range(0,len(pose_list)):
-        if ((pose_array[i,0]-43)**2 + (pose_array[i,1] +54)**2 )< 2:
+        if ((pose_array[i,0]-43.0)*(pose_array[i,0]-43.0) + (pose_array[i,1] +54.0)*(pose_array[i,1] +54.0) )< 2.0:
             save_i = i
             break
 

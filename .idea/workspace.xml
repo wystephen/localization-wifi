@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f04538-5c36-4bb2-ae3e-b07ede1a6f9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/auto_clustering.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/plot_geography.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_cmd2" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/mac_list.txt" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/auto_clustering.py" afterPath="$PROJECT_DIR$/auto_clustering.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_transfor.py" afterPath="$PROJECT_DIR$/data_transfor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out_wifi.txt" afterPath="$PROJECT_DIR$/out_wifi.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/svm.py" afterPath="$PROJECT_DIR$/svm.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="localization-wifi.iws" />
@@ -37,7 +33,7 @@
         <entry file="file://$PROJECT_DIR$/svm.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="990">
-              <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
+              <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
               <folding>
                 <element signature="e#44#67#0" expanded="true" />
               </folding>
@@ -58,12 +54,12 @@
       <file leaf-file-name="data_transfor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_transfor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="1890">
-              <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1935">
+              <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
               <folding>
                 <element signature="e#134#723#0" expanded="false" />
                 <element signature="e#2134#2952#0" expanded="false" />
-                <element signature="e#4306#4938#0" expanded="false" />
+                <element signature="e#4442#5121#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -79,23 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="plot_geography.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/plot_geography.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
-              <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
-              <folding>
-                <element signature="e#44#56#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="auto_clustering.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/auto_clustering.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.994695" vertical-offset="193" max-vertical-offset="1245">
-              <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+            <state vertical-scroll-proportion="-1.7453581" vertical-offset="778" max-vertical-offset="1155">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding>
                 <element signature="e#45#57#0" expanded="true" />
               </folding>
@@ -631,7 +615,7 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20123361" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39786586" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36238533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36238533" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20123361" sideWeight="0.50119907" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -703,25 +687,12 @@
           <line>3</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/data_transfor.py</url>
-          <line>101</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
       </breakpoints>
       <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/para_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="100">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/svm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="675">
@@ -747,7 +718,7 @@
           <folding>
             <element signature="e#134#723#0" expanded="false" />
             <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -792,7 +763,7 @@
           <folding>
             <element signature="e#134#723#0" expanded="false" />
             <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -822,7 +793,7 @@
           <folding>
             <element signature="e#134#723#0" expanded="false" />
             <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -874,7 +845,7 @@
           <folding>
             <element signature="e#134#723#0" expanded="false" />
             <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -906,7 +877,7 @@
           <folding>
             <element signature="e#134#723#0" expanded="false" />
             <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1108,9 +1079,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/test_cmd">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourcedata/201503141218/end_wifi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="255960">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sourcedata/201503141231/end_wifi.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="287760">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data_transfor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="228" max-vertical-offset="1935">
+          <caret line="110" column="36" selection-start-line="110" selection-start-column="36" selection-end-line="110" selection-end-column="36" />
+          <folding>
+            <element signature="e#134#723#0" expanded="false" />
+            <element signature="e#2134#2952#0" expanded="false" />
+            <element signature="e#4442#5121#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/svm.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="990">
+          <caret line="36" column="22" selection-start-line="36" selection-start-column="22" selection-end-line="36" selection-end-column="22" />
+          <folding>
+            <element signature="e#44#67#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/plot_geography.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="420">
+        <state vertical-scroll-proportion="0.215311" vertical-offset="0" max-vertical-offset="627">
           <caret line="9" column="59" selection-start-line="9" selection-start-column="59" selection-end-line="9" selection-end-column="59" />
           <folding>
             <element signature="e#44#56#0" expanded="true" />
@@ -1126,40 +1143,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_cmd">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="6" column="2" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data_transfor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1305" max-vertical-offset="1890">
-          <caret line="177" column="5" selection-start-line="177" selection-start-column="5" selection-end-line="177" selection-end-column="5" />
-          <folding>
-            <element signature="e#134#723#0" expanded="false" />
-            <element signature="e#2134#2952#0" expanded="false" />
-            <element signature="e#4306#4938#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/svm.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="352" max-vertical-offset="990">
-          <caret line="51" column="46" selection-start-line="51" selection-start-column="46" selection-end-line="51" selection-end-column="46" />
-          <folding>
-            <element signature="e#44#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auto_clustering.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.994695" vertical-offset="193" max-vertical-offset="1245">
-          <caret line="63" column="23" selection-start-line="63" selection-start-column="23" selection-end-line="63" selection-end-column="23" />
+        <state vertical-scroll-proportion="-1.7453581" vertical-offset="778" max-vertical-offset="1155">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding>
             <element signature="e#45#57#0" expanded="true" />
           </folding>

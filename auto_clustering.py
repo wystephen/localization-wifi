@@ -14,8 +14,8 @@ pose2= numpy.loadtxt('sourcedata/201503141231/end_pose.txt')
 wifi1= numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
 wifi2= numpy.loadtxt('sourcedata/201503141231/end_wifi.txt')
 
-half_pose, half_wifi = data_transfor.half_data_trans('sourcedata/201503141218/end_pose.txt','sourcedata/201503141218/end_wifi.txt')
 half_pose_test, half_wifi_test = data_transfor.half_data_trans('sourcedata/201503141231/end_pose.txt','sourcedata/201503141231/end_wifi.txt')
+half_pose, half_wifi = data_transfor.half_data_trans('sourcedata/201503141231/end_pose.txt','sourcedata/201503141231/end_wifi.txt')
 numpy.random.seed(0)
 print '数据读取完毕'
 K_means = KMeans(init='k-means++',n_clusters=90, n_init=10)
@@ -28,13 +28,7 @@ ans, label, clf =svm.svm_quick(half_wifi, K_means_label)
 
 print 'train over'
 
-plt.figure(2)
-plt.plot(ans)
-plt.plot(label)
-plt.grid(2)
-
 plt.figure(1)
-
 plt.plot(K_means_label, 'o')
 plt.grid(1)
 
@@ -59,7 +53,7 @@ for i in range(0,len(half_wifi_test)):
                 (landmark[(clf.predict(half_wifi_test[i,:])),0]-half_pose_test[i,0]) \
                 +(landmark[clf.predict(half_wifi_test[i,:]),1]-half_pose_test[i,1]) *\
         (landmark[clf.predict(half_wifi_test[i,:]),1]-half_pose_test[i,1]))**(0.5)
-    print error[i]
+    #print error[i]
     if error[i] < 5.0:
         small_error +=1
     if error[i] > 5.0 and error[i] < 10.0:

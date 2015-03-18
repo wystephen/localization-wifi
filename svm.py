@@ -51,7 +51,7 @@ def svm_test(wifi_file,pose_file):
         #print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
     print 'err:',err,'err_times:',err_times
     print err_times*100.0/len(pose_label) ,' %'#分类错误
-	return clf, pose_label_dict
+    return clf, pose_lable_dict
 
 
 ######################################################################
@@ -60,26 +60,32 @@ def svm_test(wifi_file,pose_file):
 #
 #######################################################################
 if __name__ == '__main__':
-    clf, pose_label_dict = vm_test('sourcedata/201503141218/end_wifi.txt','sourcedata/201503141218/end_pose.txt')
-	#没有尝试过交叉验证
-	test_pose = numpy.loadtxt('sourcedata/201503141231/end_pose.txt')
-	test_wifi = numpy.loadtxt('sourcedata/201503141231/end_wifi.txt')
+    clf, pose_label_dict_out = svm_test('sourcedata/201503141231/end_wifi.txt','sourcedata/201503141231/end_pose.txt')
+    #没有尝试过交叉验证
+    test_pose = numpy.loadtxt('sourcedata/201503141218/end_pose.txt')
+    test_wifi = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
 
-	ans_pose_label = numpy.zeros(len(test_wifi))
-	errs = numpy.zeros(len(test_wifi))
-	error_times = 0
-	for i in range(0,len(test_wifi)-1)：
-		ans_pose_label[i] = clf.predict(test_wifi[i,:])
-		tmp_pose = pose_lable_dict[ans_pose_label[i]]
-		errs[i] = ((tmp_pose[0] - test_pose[i,0])*(tmp_pose[0] -
-			test_pose[i,0])+(tmp_pose[1] - test_pose[i,1]) *(tmp_pose[1] -
-				test_pose[i,1])
-		)
-		if errs[i] < 5.0:
-			error_times +=1
+    ans_pose_label = numpy.zeros(len(test_wifi))
+    errs = numpy.zeros(len(test_wifi))
+    error_times = 0
+    for i in range(0,len(test_wifi)-1):
+        ans_pose_label[i] = clf.predict(test_wifi[i,:])
+        tmp_pose = pose_label_dict_out[ans_pose_label[i]]
+        errs[i] = ((tmp_pose[0] - test_pose[i,0])*(tmp_pose[0] -
+            test_pose[i,0])+(tmp_pose[1] - test_pose[i,1]) *(tmp_pose[1] -
+                test_pose[i,1])) **(0.5)
+        if errs[i] < 5.0:
+            error_times +=1
+            print 'good', errs[i]
 
-	plt.figure(1)
-	print 'acc:‘ error_times * 1.0 / len(test_pose)
+    plt.figure(1)
+    print 'acc:', error_times * 1.0 / len(test_pose)
+    plt.plot(errs[:], 'o')
+    plt.figure(2)
+    plt.plot(test_pose[:,0],test_pose[:,1],'o')
+    plt.figure(3)
+    for (i,a) in pose_label_dict_out.items():
+        plt.plot(a[0],a[1],'o')
 
-
+    plt.show()
 

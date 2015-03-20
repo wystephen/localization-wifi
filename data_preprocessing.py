@@ -8,7 +8,6 @@ import numpy
 def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
     """
 
-
     :param wifi_file: wifi文件（包含地址）（已经转化为格式： 时间 mac1（强度） mac2（强度） 。。。）
     :param pose_file: pose文件（包含地址）
     :param pose_out: 去除时间，

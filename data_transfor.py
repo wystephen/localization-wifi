@@ -17,6 +17,7 @@ def pose_to_label(pose, distance):
     label_dict = dict()
     label_dict[0] = [pose[0, 0], pose[0, 1]]
     label[0] = 0
+
     print label[0]
     for i in xrange(len(pose)):
         if (pose[i, 0] - pose[last_i, 0]) * (pose[i, 0] - pose[last_i, 0]) + \

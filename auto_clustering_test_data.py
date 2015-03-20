@@ -16,8 +16,8 @@ import svm
 #half_wifi_test = numpy.loadtxt('sourcedata/201503141231/end_wifi.txt')
 #half_wifi = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
 
-half_pose_test, half_wifi_test = data_transfor.half_data_trans('data_save/20153141231end_pose.txt','data_save/20153141231end_wifi.txt')
-half_pose, half_wifi = data_transfor.half_data_trans('data_save/20153141218end_pose.txt','data_save/20153141218end_wifi.txt')
+half_pose, half_wifi = data_transfor.half_data_trans('data_save/20153141231end_pose.txt','data_save/20153141231end_wifi.txt')
+half_pose_test, half_wifi_test = data_transfor.half_data_trans('data_save/20153141218end_pose.txt','data_save/20153141218end_wifi.txt')
 numpy.random.seed(0)
 plt.figure(10)
 plt.plot(half_pose_test[:,0],half_pose_test[:, 1], 'or')

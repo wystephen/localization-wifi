@@ -11,7 +11,7 @@ print(__doc__)
 # def grid_search(wifi_file,pose_file):
 wifi_file = 'end_wifi.txt'
 pose_file = 'end_pose.txt'
-#wifi, pose = read_data.read_data()
+# wifi, pose = read_data.read_data()
 wifi = numpy.loadtxt(wifi_file)
 pose = numpy.loadtxt(pose_file)
 

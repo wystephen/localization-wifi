@@ -135,7 +135,7 @@ def file_trance(file, year, month, day, hours):
             line = line[1]
             line = line.split('-')
             thetime = time.mktime([int(year), int(month), int(day), int(hours), int(line[0]), int(line[1]), 0, 0, 0])
-            #print thetime
+            # print thetime
             thetime = thetime + float(line[2]) / 1000
             #print 'thetime: ' , thetime
             fout.write(str(thetime))
@@ -167,7 +167,7 @@ def half_data_trans(end_pose, end_wifi):
 
     for i in range(0, len(pose_list)):
         if ((pose_array[i, 0] - 43.0) * (pose_array[i, 0] - 43.0) + (pose_array[i, 1] + 54.0) * (
-            pose_array[i, 1] + 54.0) ) < 2.0:
+                    pose_array[i, 1] + 54.0) ) < 2.0:
             save_i = i
             break
 
@@ -180,7 +180,7 @@ def half_data_trans(end_pose, end_wifi):
 
     return half_pose, half_wifi
 
-#file_trance('sourcedata/wifi.txt',year='2015', month='01', day='28', hours='18', minutes='11')
+# file_trance('sourcedata/wifi.txt',year='2015', month='01', day='28', hours='18', minutes='11')
 if __name__ == '__main__':
     print '输入文件目录：'
     data_dir = raw_input()
@@ -208,9 +208,11 @@ if __name__ == '__main__':
     print '成功，保存转化后的wifi数据到文件 out_wifi.txt'
     print '开始下一步，同步时间轴'
     #syn_data(laser_file, wifi_file='out_wifi.txt', pose_out=data_dir + 'end_pose.txt',
-            # wifi_out=data_dir + 'end_wifi.txt')
+    # wifi_out=data_dir + 'end_wifi.txt')
     data_save_dir = 'data_save/'
 
-    data_preprocessing.sync_timeline(wifi_file='out_wifi.txt', pose_file=laser_file, pose_out=str(data_save_dir + year + month + day + hours+minutes + 'end_pose.txt'),
-             wifi_out=str(data_save_dir + year + month + day + hours+ minutes +'end_wifi.txt'))
+    data_preprocessing.sync_timeline(wifi_file='out_wifi.txt', pose_file=laser_file, pose_out=str(
+        data_save_dir + year + month + day + hours + minutes + 'end_pose.txt'),
+                                     wifi_out=str(
+                                         data_save_dir + year + month + day + hours + minutes + 'end_wifi.txt'))
     print '完成数据转化，保存结果到 end_pose.txt 和 end_wifi.txt'

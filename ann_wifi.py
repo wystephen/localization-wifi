@@ -12,7 +12,7 @@ from pybrain.tools.shortcuts import buildNetwork
 net = buildNetwork(164, 12, 2)
 # 建立神经网络
 n = FeedForwardNetwork()
-#确定神经网络形式
+# 确定神经网络形式
 inLayer = LinearLayer(164)
 hiddenLayer = SigmoidLayer(15)
 hiddenLayer2 = TanhLayer(10)

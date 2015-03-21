@@ -30,7 +30,7 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
     for pose_data in pose_list:
         pose_data_tmp = pose_data.split(' ')
         pose_time_array[pose_list.index(pose_data)] = pose_data_tmp[0]
-    #输出 pose 时间序列的数组
+    # 输出 pose 时间序列的数组
     print 'the pose_time_array:', pose_time_array
 
     for wifi_data in wifi_list:
@@ -45,7 +45,7 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
         min_time_diff = 10000
         time_diff_min_index = 0  #设置一个极大的不可能值
         for i in range(0, len(pose_time_array)):
-            time_diff = ((float(wifi_time)- (pose_time_array[i]))*1.0)
+            time_diff = ((float(wifi_time) - (pose_time_array[i])) * 1.0)
             if time_diff < 0:
                 time_diff = time_diff * (-1.0)
             if time_diff < min_time_diff:
@@ -54,9 +54,9 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
         #根据得到的序号i分别输出 pose，和wifi
         pose_out_tmp = pose_list[time_diff_min_index]
         pose_out_tmp = pose_out_tmp.split(' ')
-        pose_out.write(str(pose_out_tmp[1]) + ' '+ str(pose_out_tmp[2]))
+        pose_out.write(str(pose_out_tmp[1]) + ' ' + str(pose_out_tmp[2]))
         pose_out.write('\n')
-        for i in range(1,len(wifi_data)):
+        for i in range(1, len(wifi_data)):
             wifi_out.write(str(wifi_data[i]) + ' ')
         wifi_out.write('\n')
 

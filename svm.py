@@ -34,7 +34,7 @@ def svm_test(wifi_file, pose_file):
     pose = numpy.loadtxt(pose_file)
 
     print 'pose', pose
-    #以1.5m为间隔将数据离散化，
+    # 以1.5m为间隔将数据离散化，
     pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 2)
     clf = svm.SVC()
     print 'wifi', wifi
@@ -75,8 +75,8 @@ if __name__ == '__main__':
         tmp_pose = pose_label_dict_out[ans_pose_label[i]]
         errs[i] = ((tmp_pose[0] - test_pose[i, 0]) * (tmp_pose[0] -
                                                       test_pose[i, 0]) + (tmp_pose[1] - test_pose[i, 1]) * (
-                   tmp_pose[1] -
-                   test_pose[i, 1])) ** (0.5)
+                       tmp_pose[1] -
+                       test_pose[i, 1])) ** (0.5)
         if errs[i] < 5.0:
             error_times += 1
             print 'good', errs[i]

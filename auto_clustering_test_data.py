@@ -10,11 +10,11 @@ import data_transfor
 import svm
 
 
-half_pose_test = numpy.loadtxt('sourcedata/201503141231/end_pose.txt')
-half_pose = numpy.loadtxt('sourcedata/201503141231/end_pose.txt')
+half_pose_test = numpy.loadtxt('sourcedata/201503141218/end_pose.txt')
+half_pose = numpy.loadtxt('sourcedata/201503141218/end_pose.txt')
 
-half_wifi_test = numpy.loadtxt('sourcedata/201503141231/end_wifi.txt')
-half_wifi = numpy.loadtxt('sourcedata/201503141231/end_wifi.txt')
+half_wifi_test = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
+half_wifi = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
 
 # half_pose_test, half_wifi_test = data_transfor.half_data_trans('data_save/18end_pose.txt',
 #                                                               'data_save/18end_wifi.txt')
@@ -25,7 +25,7 @@ plt.figure(10)
 plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
 plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
 print '数据读取完毕'
-K_means_type_num = 130
+K_means_type_num = 300
 K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
 K_means.fit(half_wifi)
 

@@ -64,8 +64,8 @@ def svm_test(wifi_file, pose_file):
 if __name__ == '__main__':
     clf, pose_label_dict_out = svm_test('sourcedata/201503141231/end_wifi.txt', 'data_save/31end_pose.txt')
     # 没有尝试过交叉验证
-    test_pose = numpy.loadtxt('data_save/18end_pose.txt')
-    test_wifi = numpy.loadtxt('data_save/18end_wifi.txt')
+    test_pose = numpy.loadtxt('data_save/31end_pose.txt')
+    test_wifi = numpy.loadtxt('data_save/31end_wifi.txt')
 
     ans_pose_label = numpy.zeros(len(test_wifi))
     errs = numpy.zeros(len(test_wifi))

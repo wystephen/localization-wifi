@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     plt.figure(1)
 
-    label, label_dict = data_transfor.pose_to_label(pose3, 5)
+    label, label_dict = data_transfor.pose_to_label(pose3, 10)
     last_label_num = 0
     for label_num in label:
         if label_num == last_label_num:
@@ -43,14 +43,14 @@ if __name__ == '__main__':
         for pose_tmp in pose1:
             pose_tmp_arr = pose_tmp.split(' ')
             dis = ((pose[0] - float(pose_tmp_arr[0])) ** (2) + (pose[1] - float(pose_tmp_arr[1]) ) ** (2)) ** (0.5)
-            if dis < min_dis_pose1:
+            if dis < min_dis_pose1 and pose1.index(pose_tmp) < len(pose1) /2.0:
                 min_dis_pose1 = dis
                 min_index_pose1 = pose1.index(pose_tmp)
         for pose_tmp in pose2:
             pose_tmp_arr = pose_tmp.split(' ')
             dis = ((float(pose[0]) - float(pose_tmp_arr[0])) ** (2) + (float(pose[1]) - float(pose_tmp_arr[1])) ** (
             2)) ** (0.5)
-            if dis < min_dis_pose2:
+            if dis < min_dis_pose2 and pose2.index(pose_tmp) < len(pose2) /2.0:
                 min_dis_pose2 = dis
                 min_index_pose2 = pose2.index(pose_tmp)
         plt.plot(2)

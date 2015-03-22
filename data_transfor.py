@@ -118,6 +118,7 @@ def file_trance(file, year, month, day, hours):
     if (os.path.exists(r'mac_list.txt')) == True:
         fp = open('mac_list.txt', 'rb')
         mac_list = fp.readlines()
+        print 'mac_list:', mac_list
         fp.close()
     fout = open('out_wifi.txt', 'w')
     all_instance = numpy.zeros(len(mac_list) + 1)
@@ -142,9 +143,10 @@ def file_trance(file, year, month, day, hours):
             fout.write(' ')
             first = False
         else:
+            #print 'line:', line
             line = line.split(' ')
-            if str(line[0]) + '\n' in mac_list:
-                num = mac_list.index(str(line[0]) + '\n')
+            if str(line[0]) + '\r\n' in mac_list:
+                num = mac_list.index(str(line[0]) + '\r\n')
                 all_instance[num] = line[1]
             if str(line[0]) in mac_list:
                 num = mac_list.index(str(line[0]))

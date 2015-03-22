@@ -41,7 +41,7 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
             continue
         wifi_time = wifi_data[0]
 
-        print 'wifi_time:', wifi_data
+        #print 'wifi_time:', wifi_data
         min_time_diff = 10000
         time_diff_min_index = 0  #设置一个极大的不可能值
         for i in range(0, len(pose_time_array)):
@@ -62,3 +62,4 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
 
     print '时间轴同步wifi和pose数据成功'
     return
+

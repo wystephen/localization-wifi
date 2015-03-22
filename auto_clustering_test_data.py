@@ -10,11 +10,11 @@ import data_transfor
 import svm
 
 
-half_pose_test = numpy.loadtxt('sourcedata/201503141218/end_pose.txt')
-half_pose = numpy.loadtxt('sourcedata/201503141218/end_pose.txt')
+half_pose_test = numpy.loadtxt('sourcedata/201503221527/end_pose.txt')
+half_pose = numpy.loadtxt('sourcedata/201503221527/end_pose.txt')
 
-half_wifi_test = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
-half_wifi = numpy.loadtxt('sourcedata/201503141218/end_wifi.txt')
+half_wifi_test = numpy.loadtxt('sourcedata/201503221527/end_wifi.txt')
+half_wifi = numpy.loadtxt('sourcedata/201503221527/end_wifi.txt')
 
 # half_pose_test, half_wifi_test = data_transfor.half_data_trans('data_save/18end_pose.txt',
 #                                                               'data_save/18end_wifi.txt')

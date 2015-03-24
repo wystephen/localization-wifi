@@ -63,3 +63,38 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
     print '时间轴同步wifi和pose数据成功'
     return
 
+def read_end_data(wifi_file, pose_file, dir = 'data_save/'):
+    '''
+    设定了默认路径，为data_save
+    :param wifi_file: wifi数组保存的文件名
+    :param pose_file: pose数组保存的文件名
+    :param dir: 保存的路径末尾要加 \
+    :return:
+    '''
+    wifi = numpy.loadtxt(dir+wifi_file)
+    pose = numpy.loadtxt(dir+pose_file)
+    print 'pose:',pose
+    print 'wifi:',wifi
+    return pose , wifi
+
+def find_ap_pose(pose, wifi):
+    '''
+    找到离ap最近的坐标
+    :param pose:
+    :param wifi:
+    :return:
+    '''
+    wifi_tmp = wifi[2,:]
+    max_wifi = numpy.zeros(len(wifi_tmp))
+    for i in range(len(wifi[2,:])):
+        max_wifi[i] = max(wifi[:,i])
+    return max_wifi
+
+
+
+
+
+if __name__ == '__main__':
+    pose, wifi = read_end_data('20153221517end_wifi.txt','20153221517end_pose.txt')
+    max_wifi = find_ap_pose(pose, wifi)
+    print max_wifi

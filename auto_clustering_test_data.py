@@ -17,7 +17,7 @@ half_wifi_test = numpy.loadtxt('data_save/20153221517end_wifi.txt')
 half_wifi = numpy.loadtxt('data_save/20153221517end_wifi.txt')
 
 # half_pose_test, half_wifi_test = data_transfor.half_data_trans('data_save/18end_pose.txt',
-#                                                               'data_save/18end_wifi.txt')
+# 'data_save/18end_wifi.txt')
 #half_pose, half_wifi = data_transfor.half_data_trans('data_save/31end_pose.txt',
 #                                             'data_save/31end_wifi.txt')
 numpy.random.seed(0)

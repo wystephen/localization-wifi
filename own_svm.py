@@ -1,7 +1,7 @@
-
 # -*- coding:utf-8 -*-
 
 from __future__ import division
+
 __author__ = 'Administrator'
 import numpy as np
 import scipy as sp
@@ -14,7 +14,7 @@ import random as rd
 
 
 class simpleSVM:
-    def sign(self,x):
+    def sign(self, x):
         q = np.zeros(np.array(x).shape)
         q[x >= 0] = 1
         q[x < 0] = -1
@@ -93,8 +93,8 @@ class simpleSVM:
             L = max(0, self.alpha[i] + self.alpha[j] - self.C)
             H = min(self.C, self.C + self.alpha[j] - self.alpha[i])
         else:
-            L = max(0,self.alpha[j] - self.alpha[i])
-            H = min(self.C,self.C +self.alpha[j] - self.alpha[i])
+            L = max(0, self.alpha[j] - self.alpha[i])
+            H = min(self.C, self.C + self.alpha[j] - self.alpha[i])
         a2_old = self.alpha[j]
         a1_old = self.alpha[i]
 
@@ -181,7 +181,7 @@ class simpleSVM:
 
     def error(self, X, y):
         py = np.array(self.pred(np.array(X))).flatten(1)
-        #print y,py
+        # print y,py
         print "the #error_case is  ", np.sum(py != np.array(y))
 
     def prints_test_linear(self):
@@ -190,7 +190,7 @@ class simpleSVM:
             w += self.alpha[t] * self.y[t] * self.X[:, t].flatten(1)
         w = w.reshape(1, w.size)
         print np.sum(self.sign(np.dot(w, self.X) + self.b).flatten(1) != self.y), "errrr"
-        #print w,self.b
+        # print w,self.b
         x1 = 0
         y1 = -self.b / w[0][1]
         y2 = 0

@@ -15,7 +15,7 @@ pose_file = 'end_pose.txt'
 wifi = numpy.loadtxt(wifi_file)
 pose = numpy.loadtxt(pose_file)
 
-#以1.5m为间隔将数据离散化，
+# 以1.5m为间隔将数据离散化，
 pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 1.5)
 #wifi_train, wifi_test, pose_label_train, pose_label_test = train_test_split(
 #    wifi, pose_label, test_size=0.1, random_state=0)

@@ -1,5 +1,5 @@
 __author__ = 'steve'
-# -*- coding:utf_8 -*-
+# -*- coding:utf-8 -*-
 #
 
 import os
@@ -12,6 +12,12 @@ import data_preprocessing
 
 
 def pose_to_label(pose, distance):
+    '''
+
+    :param pose:
+    :param distance:
+    :return: label，label——dict 正常的
+    '''
     last_i = 0
     label = numpy.zeros(len(pose))
     label_dict = dict()
@@ -138,12 +144,12 @@ def file_trance(file, year, month, day, hours):
             thetime = time.mktime([int(year), int(month), int(day), int(hours), int(line[0]), int(line[1]), 0, 0, 0])
             # print thetime
             thetime = thetime + float(line[2]) / 1000
-            #print 'thetime: ' , thetime
+            # print 'thetime: ' , thetime
             fout.write(str(thetime))
             fout.write(' ')
             first = False
         else:
-            #print 'line:', line
+            # print 'line:', line
             line = line.split(' ')
             if str(line[0]) + '\r\n' in mac_list:
                 num = mac_list.index(str(line[0]) + '\r\n')
@@ -193,7 +199,7 @@ if __name__ == '__main__':
     wifi_file = raw_input()
     wifi_file = data_dir + wifi_file
     print '生成mac_list文件中'
-    #mac_list = get_mac_list(wifi_file)
+    # mac_list = get_mac_list(wifi_file)
     #print 'len mac_list' , len(mac_list)
     print '转变wifi 为 向量形式'
     print 'year'

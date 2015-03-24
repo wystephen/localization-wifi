@@ -38,9 +38,9 @@ def svm_test(wifi_file, pose_file):
     pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 2)
     clf = svm.SVC()
     print 'wifi', wifi
-    print clf.fit(wifi, pose_label)  #训练
+    print clf.fit(wifi, pose_label)  # 训练
 
-    print 'poselabel', pose_label  #输出，可以看出分了多少各类别
+    print 'poselabel', pose_label  # 输出，可以看出分了多少各类别
     err = 0
     err_times = 0
     ans = numpy.zeros(len(pose_label))
@@ -49,10 +49,10 @@ def svm_test(wifi_file, pose_file):
         err += (ans[i] - pose_label[i]) * (ans[i] - pose_label[i])
         if abs(ans[i] - pose_label[i]) > 2:
             err_times = err_times + 1
-            print 'ans:', ans[i], 'pose_label: ', pose_label[i]  #显示错误分类的结果，和真实类别
-            #print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
+            print 'ans:', ans[i], 'pose_label: ', pose_label[i]  # 显示错误分类的结果，和真实类别
+            # print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
     print 'err:', err, 'err_times:', err_times
-    print err_times * 100.0 / len(pose_label), ' %'  #分类错误
+    print err_times * 100.0 / len(pose_label), ' %'  # 分类错误
     return clf, pose_lable_dict
 
 

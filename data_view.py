@@ -15,7 +15,7 @@ if __name__ == '__main__':
     fp = open('data_save/31end_pose.txt')
     pose2 = fp.readlines()
     fp.close()
-    #fp = open('data_save/18end_wifi.txt')
+    # fp = open('data_save/18end_wifi.txt')
     #wifi1 = fp.readlines()
     #fp.close()
     #fp = open('data_save/31end_wifi.txt')
@@ -43,14 +43,14 @@ if __name__ == '__main__':
         for pose_tmp in pose1:
             pose_tmp_arr = pose_tmp.split(' ')
             dis = ((pose[0] - float(pose_tmp_arr[0])) ** (2) + (pose[1] - float(pose_tmp_arr[1]) ) ** (2)) ** (0.5)
-            if dis < min_dis_pose1 and pose1.index(pose_tmp) < len(pose1) /2.0:
+            if dis < min_dis_pose1 and pose1.index(pose_tmp) < len(pose1) / 2.0:
                 min_dis_pose1 = dis
                 min_index_pose1 = pose1.index(pose_tmp)
         for pose_tmp in pose2:
             pose_tmp_arr = pose_tmp.split(' ')
             dis = ((float(pose[0]) - float(pose_tmp_arr[0])) ** (2) + (float(pose[1]) - float(pose_tmp_arr[1])) ** (
-            2)) ** (0.5)
-            if dis < min_dis_pose2 and pose2.index(pose_tmp) < len(pose2) /2.0:
+                2)) ** (0.5)
+            if dis < min_dis_pose2 and pose2.index(pose_tmp) < len(pose2) / 2.0:
                 min_dis_pose2 = dis
                 min_index_pose2 = pose2.index(pose_tmp)
         plt.plot(2)

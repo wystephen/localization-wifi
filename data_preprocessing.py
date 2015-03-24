@@ -41,7 +41,7 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
             continue
         wifi_time = wifi_data[0]
 
-        #print 'wifi_time:', wifi_data
+        # print 'wifi_time:', wifi_data
         min_time_diff = 10000
         time_diff_min_index = 0  #设置一个极大的不可能值
         for i in range(0, len(pose_time_array)):
@@ -63,7 +63,8 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
     print '时间轴同步wifi和pose数据成功'
     return
 
-def read_end_data(wifi_file, pose_file, dir = 'data_save/'):
+
+def read_end_data(wifi_file, pose_file, dir='data_save/'):
     '''
     设定了默认路径，为data_save
     :param wifi_file: wifi数组保存的文件名
@@ -71,11 +72,13 @@ def read_end_data(wifi_file, pose_file, dir = 'data_save/'):
     :param dir: 保存的路径末尾要加 \
     :return:
     '''
-    wifi = numpy.loadtxt(dir+wifi_file)
-    pose = numpy.loadtxt(dir+pose_file)
-    print 'pose:',pose
-    print 'wifi:',wifi
-    return pose , wifi
+    wifi = numpy.loadtxt(dir + wifi_file)
+    pose = numpy.loadtxt(dir + pose_file)
+    print 'pose:', pose
+    print 'wifi:', wifi
+    print 'wifi ---:', wifi[:, 3]
+    return pose, wifi
+
 
 def find_ap_pose(pose, wifi):
     '''
@@ -84,17 +87,23 @@ def find_ap_pose(pose, wifi):
     :param wifi:
     :return:
     '''
-    wifi_tmp = wifi[2,:]
+    wifi_tmp = wifi[2, :]
     max_wifi = numpy.zeros(len(wifi_tmp))
-    for i in range(len(wifi[2,:])):
-        max_wifi[i] = max(wifi[:,i])
+    for i in range(len(wifi[2, :])):
+        max_wifi[i] = max(wifi[:, i])
     return max_wifi
 
-
-
-
+def pose_dis(pose1,pose2):
+    dis = numpy.zeros(len(pose1[:,1]))
+    print 'lenpose:',len(pose1)
+    print 'lenpose2:',len(pose2)
+    print 'lendis:', len(dis)
+    for i  in range(len(dis)):
+        dis[i] = ((pose1[i,0]-pose2[i,0])**(2.0) +\
+                  (pose2[i,1] - pose2[i,1])**(2.0))**(0.5)
+    return dis
 
 if __name__ == '__main__':
-    pose, wifi = read_end_data('20153221517end_wifi.txt','20153221517end_pose.txt')
+    pose, wifi = read_end_data('20153221527end_wifi.txt', '20153221527end_pose.txt')
     max_wifi = find_ap_pose(pose, wifi)
     print max_wifi

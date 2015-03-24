@@ -32,7 +32,7 @@ n.addConnection(hidden_to_hidden2)
 n.addConnection(hidden2_to_outLayer)
 
 print n
-#数据加载方法——数据集
+# 数据加载方法——数据集
 data = SupervisedDataSet(164, 2)  #  (输入数据个数，输出数据个数）
 #添加数据到数据集用方法：data.addSample(inp,target)
 wifi = numpy.loadtxt('wifi_end.txt')

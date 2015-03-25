@@ -102,4 +102,10 @@ if __name__ == '__main__':
     err4 = data_preprocessing.pose_dis(out_pose4,pose4)
     plt.plot(err4,'g')
     plt.grid(2)
+    plt.figure(3)
+    ok_times = 0
+    for i in range(len(err1)):
+        if err1[i] < 5:
+            ok_times+=1
+    print 'acc:',ok_times*1.0/len(err1)
     plt.show()

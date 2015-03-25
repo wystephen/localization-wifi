@@ -8,11 +8,11 @@ import data_transfor
 
 if __name__ == '__main__':
     # pose1 = numpy.loadtxt('data_save/18end_pose.txt')
-    pose3 = numpy.loadtxt('data_save/31end_pose.txt')
-    fp = open('data_save/18end_pose.txt')
+    pose3 = numpy.loadtxt('data_save/20153141231end_pose.txt')
+    fp = open('data_save/20153141218end_pose.txt')
     pose1 = fp.readlines()
     fp.close()
-    fp = open('data_save/31end_pose.txt')
+    fp = open('data_save/20153141231end_pose.txt')
     pose2 = fp.readlines()
     fp.close()
     # fp = open('data_save/18end_wifi.txt')
@@ -22,12 +22,12 @@ if __name__ == '__main__':
     #wifi2 = fp.readlines()
     #fp.close()
 
-    wifi1 = numpy.loadtxt('data_save/18end_wifi.txt')
-    wifi2 = numpy.loadtxt('data_save/31end_wifi.txt')
+    wifi1 = numpy.loadtxt('data_save/20153141218end_wifi.txt')
+    wifi2 = numpy.loadtxt('data_save/20153141231end_wifi.txt')
 
     plt.figure(1)
 
-    label, label_dict = data_transfor.pose_to_label(pose3, 10)
+    label, label_dict = data_transfor.pose_to_label(pose3, 3)
     last_label_num = 0
     for label_num in label:
         if label_num == last_label_num:

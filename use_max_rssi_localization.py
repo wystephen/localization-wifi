@@ -107,5 +107,5 @@ if __name__ == '__main__':
     for i in range(len(err1)):
         if err1[i] < 5:
             ok_times+=1
-    print 'acc:',ok_times*1.0/len(err1)
+    print 'acc:', ok_times*1.0/len(err1)
     plt.show()

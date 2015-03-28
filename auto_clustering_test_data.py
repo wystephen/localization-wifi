@@ -31,7 +31,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
     plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
     print '数据读取完毕'
-    K_means_type_num = 100
+    K_means_type_num = 300
     K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
     K_means.fit(half_wifi)
 
@@ -39,7 +39,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     K_means_label = K_means.labels_
     #print K_means_label
     #支持向量机的语句
-    ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#,kernel='poly')
+    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#,kernel='poly')
     #随机森林
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
     #LDA
@@ -47,7 +47,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     #one vs one classifier
     #ans, label, clf = classify_use_test.onevsone_quick(half_wifi,K_means_label)
     #one_vs_rest
-    ans, label, clf = classify_use_test.onevsrest_quick(half_wifi,K_means_label)
+    #ans, label, clf = classify_use_test.onevsrest_quick(half_wifi,K_means_label)
     print 'train over'
 
     plt.figure(1)
@@ -105,7 +105,7 @@ if __name__ == '__main__':
     num = 0
     for i in range(data.how_many()):
         for j in range(data.how_many()):
-            if i <= j or j>5 :#or i < data.how_many()-1 :
+            if i < j or j>5 or j < data.how_many() -1 or i < data.how_many()-1 :
                 continue
             pose,wifi = data.get_data(i)
             pose_test,wifi_test = data.get_data(j)

@@ -31,7 +31,7 @@ def onevsrest_quick(data, label):
     return ans, label, clf
 
 def onevsone_quick(data,label):
-    clf = OneVsOneClassifier(RandomForestClassifier(n_estimators=5))
+    clf = OneVsOneClassifier(RandomForestClassifier(n_estimators=10))
     #print 'data',data
     clf.fit(data,label) #训练
 

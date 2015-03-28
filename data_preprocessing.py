@@ -121,11 +121,16 @@ def data_transform(wifi):
     '''
     #print 'wifi',wifi
     for i in range(len(wifi[:,1])):
+        #思路是 将强度转化成 与每一组最强的信号的比值，（各个ap之间不知道是否相关）
         max_rssi = max(wifi[i,:])
-        #wifi[i,:] = wifi[i,:] / 70
+        #wifi[i,:] =- wifi[i,:] + max_rssi
         for j in range(len(wifi[i,:])):
             if wifi[i,j] < 0.4 and wifi[i,j] > 0.1:
                 wifi[i,j] = 0.2
+    print 'wifi[i,:] =- wifi[i,:] + max_rssi'
+
+        #思路是 强度值除以本ap此次过程中的最小值····这里貌似没法处理···
+
     #根据之前一段的强度值修正当前时刻强度值
     delta_wifi = wifi
     #for i in range(len(wifi[:,1])):
@@ -140,8 +145,27 @@ def data_transform(wifi):
             weight_rss_sum  +=(j*wifi[i,j])
             tmp_wifi[i,j] = wifi[i,j]
         tmp_wifi[i,len(wifi[1,:])] = 1.0 *weight_rss_sum /rss_sum
-        print tmp_wifi[i,len(wifi[1,:])]
+        #print tmp_wifi[i,len(wifi[1,:])]
     return tmp_wifi
+
+def rate_rssi(wifi):
+    '''
+    这个函数要在 data_manage类中使用，应该针对每一次的数据使用
+    :param wifi:
+    :return:
+    '''
+    min_rssi = numpy.ones(len(wifi[1,:]))
+    min_rssi = min_rssi * 100
+    for i in range(len(wifi[:,1])):
+        for j in range(len(wifi[i,:])):
+            if wifi[i,j] < min_rssi[j] and wifi[i,j] > 10:
+                min_rssi[j] = wifi[i,j]
+    for i in range(len(wifi[:,1])):
+        for j in range(len(wifi[i,:])):
+            wifi[i,j] = wifi[i,j] / min_rssi[j]
+
+    return wifi
+
 
 
 if __name__ == '__main__':

@@ -31,7 +31,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
     plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
     print '数据读取完毕'
-    K_means_type_num = 300
+    K_means_type_num = 250
     K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
     K_means.fit(half_wifi)
 

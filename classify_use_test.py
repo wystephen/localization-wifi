@@ -4,12 +4,52 @@ import numpy
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import svm
 from sklearn.lda import LDA
-
-
+from sklearn.ensemble import AdaBoostClassifier
+from sklearn.tree import DecisionTreeClassifier
+from sklearn.neighbors import KNeighborsClassifier
 import matplotlib.pyplot as plt
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.multiclass import OneVsOneClassifier
 import data_transfor
+
+def knn_quick(data, label):
+    clf = KNeighborsClassifier(n_neighbors=5)
+    print 'data',data
+    clf.fit(data,label) #训练
+
+    err = 0
+    err_times = 0
+    ans = clf.predict(data)
+    for i in range(0, len(label) - 1):
+
+        err += (ans[i] - label[i]) * (ans[i] - label[i])
+        if abs(ans[i] - label[i]) > 2:
+            err_times = err_times + 1
+           # print 'ans:', ans[i], 'pose_label: ', label[i]  # 显示错误分类的结果，和真实类别
+            # print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
+    print 'err:', err, 'err_times:', err_times
+    print err_times * 100.0 / len(label), ' %'  # 分类错误率
+    return ans, label, clf
+
+def adaboost_quick(data, label):
+    clf = AdaBoostClassifier(DecisionTreeClassifier(max_depth=100),n_estimators=150, learning_rate=1)
+    #clf = AdaBoostClassifier(LDA(),n_estimators=140, learning_rate=1)
+    print 'data',data
+    clf.fit(data,label) #训练
+
+    err = 0
+    err_times = 0
+    ans = clf.predict(data)
+    for i in range(0, len(label) - 1):
+
+        err += (ans[i] - label[i]) * (ans[i] - label[i])
+        if abs(ans[i] - label[i]) > 2:
+            err_times = err_times + 1
+           # print 'ans:', ans[i], 'pose_label: ', label[i]  # 显示错误分类的结果，和真实类别
+            # print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
+    print 'err:', err, 'err_times:', err_times
+    print err_times * 100.0 / len(label), ' %'  # 分类错误率
+    return ans, label, clf
 
 def onevsrest_quick(data, label):
     clf = OneVsRestClassifier(svm.SVC(kernel = 'linear'))

@@ -122,15 +122,26 @@ def data_transform(wifi):
     #print 'wifi',wifi
     for i in range(len(wifi[:,1])):
         max_rssi = max(wifi[i,:])
-        wifi[i,:] = wifi[i,:] / max_rssi
+        #wifi[i,:] = wifi[i,:] / 70
         for j in range(len(wifi[i,:])):
             if wifi[i,j] < 0.4 and wifi[i,j] > 0.1:
-                wifi[i,j] = 0.
+                wifi[i,j] = 0.2
     #根据之前一段的强度值修正当前时刻强度值
     delta_wifi = wifi
     #for i in range(len(wifi[:,1])):
 
-    return wifi
+    #算一个重心加入到特征中
+    tmp_wifi = numpy.zeros([len(wifi[:,1]),len(wifi[1,:])+1])
+    for i in range(len(wifi[:,1])-1):
+        rss_sum = 0
+        weight_rss_sum = 0
+        for j in range(len(wifi[1,:])-1):
+            rss_sum +=wifi[i,j]
+            weight_rss_sum  +=(j*wifi[i,j])
+            tmp_wifi[i,j] = wifi[i,j]
+        tmp_wifi[i,len(wifi[1,:])] = 1.0 *weight_rss_sum /rss_sum
+        print tmp_wifi[i,len(wifi[1,:])]
+    return tmp_wifi
 
 
 if __name__ == '__main__':

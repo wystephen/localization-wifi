@@ -35,6 +35,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
     K_means.fit(half_wifi)
 
+
     print 'kmeans end'
     K_means_label = K_means.labels_
     #print K_means_label
@@ -43,11 +44,15 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     #随机森林
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
     #LDA
-    ans, label, clf = classify_use_test.LDA_quick(half_wifi,K_means_label)
+    #ans, label, clf = classify_use_test.LDA_quick(half_wifi,K_means_label)
     #one vs one classifier
     #ans, label, clf = classify_use_test.onevsone_quick(half_wifi,K_means_label)
     #one_vs_rest
     #ans, label, clf = classify_use_test.onevsrest_quick(half_wifi,K_means_label)
+    #adaboost
+    ans, label, clf = classify_use_test.adaboost_quick(half_wifi,K_means_label)
+    #knn
+    #ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
     print 'train over'
 
     plt.figure(1)
@@ -71,6 +76,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     error_pose = numpy.zeros([50000, 2])
     ##用另一组数据测试 ，看差值
     predict_ans = clf.predict(half_wifi_test)
+    #predict_ans = K_means.predict(half_wifi_test)
     for i in range(0, len(half_wifi_test)):
         error[i] = ((landmark[predict_ans[i], 0] - half_pose_test[i, 0]) * \
                     (landmark[predict_ans[i], 0] - half_pose_test[i, 0]) \
@@ -105,7 +111,7 @@ if __name__ == '__main__':
     num = 0
     for i in range(data.how_many()):
         for j in range(data.how_many()):
-            if i < j or j>5 or j < data.how_many() -1 or i < data.how_many()-1 :
+            if i < j or j>5 or j < data.how_many() -2 or i < data.how_many()-1 :
                 continue
             pose,wifi = data.get_data(i)
             pose_test,wifi_test = data.get_data(j)

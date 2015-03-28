@@ -28,8 +28,8 @@
             <file leaf-file-name="data_manage.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/data_manage.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1840">
-                    <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1840">
+                    <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
                     <folding>
                       <element signature="e#53#62#0" expanded="true" />
                     </folding>
@@ -40,8 +40,8 @@
             <file leaf-file-name="data_preprocessing.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="2500">
-                    <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="1587" max-vertical-offset="2720">
+                    <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
                     <folding>
                       <element signature="e#2382#2618#0" expanded="false" />
                       <element signature="e#2651#2937#0" expanded="false" />
@@ -53,12 +53,12 @@
             <file leaf-file-name="classify_use_test.py" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/classify_use_test.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="2940">
-                    <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+                  <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="3740">
+                    <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
                     <folding>
                       <element signature="e#44#56#0" expanded="true" />
-                      <element signature="e#2451#3111#0" expanded="false" />
-                      <element signature="e#3981#4947#0" expanded="false" />
+                      <element signature="e#4016#4676#0" expanded="false" />
+                      <element signature="e#5546#6512#0" expanded="false" />
                     </folding>
                   </state>
                 </provider>
@@ -67,8 +67,8 @@
             <file leaf-file-name="auto_clustering_test_data.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/auto_clustering_test_data.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.141218" vertical-offset="180" max-vertical-offset="2560">
-                    <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+                  <state vertical-scroll-proportion="0.48808473" vertical-offset="1547" max-vertical-offset="2680">
+                    <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
                     <folding>
                       <element signature="e#45#57#0" expanded="true" />
                     </folding>
@@ -90,24 +90,14 @@
       <file leaf-file-name="plot_geography.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plot_geography.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="540">
-              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="540">
+              <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="validation.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/sklearn/utils/validation.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3638" max-vertical-offset="4960">
-              <caret line="204" column="37" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="para_search.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="para_search.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/para_search.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="460" max-vertical-offset="1280">
@@ -117,11 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_transfor.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_transfor.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_transfor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6987952" vertical-offset="2146" max-vertical-offset="2800">
-              <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2123" max-vertical-offset="2800">
+              <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
               <folding>
                 <element signature="e#47#56#0" expanded="true" />
                 <element signature="e#174#869#0" expanded="false" />
@@ -201,10 +191,10 @@
         <option value="$PROJECT_DIR$/use_max_rssi_localization.py" />
         <option value="$PROJECT_DIR$/svm.py" />
         <option value="$PROJECT_DIR$/localization.py" />
-        <option value="$PROJECT_DIR$/data_preprocessing.py" />
         <option value="$PROJECT_DIR$/data_manage.py" />
         <option value="$PROJECT_DIR$/classify_use_test.py" />
         <option value="$PROJECT_DIR$/auto_clustering_test_data.py" />
+        <option value="$PROJECT_DIR$/data_preprocessing.py" />
       </list>
     </option>
   </component>
@@ -735,18 +725,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2926024" sideWeight="0.50729924" order="0" side_tool="true" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5988287" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59297216" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59297216" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2926024" sideWeight="0.49270073" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5841874" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26793557" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2926024" sideWeight="0.50729924" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2926024" sideWeight="0.49270073" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20123361" sideWeight="0.50119907" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3967789" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -755,7 +746,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -817,13 +807,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data_transfor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1590">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/classify_use_test.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="48" max-vertical-offset="675">
@@ -1081,14 +1064,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/para_search.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1280">
-          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ann_wifi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="723" max-vertical-offset="1400">
@@ -1112,14 +1087,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/plot_geography.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="540">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/localization.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7237423" vertical-offset="0" max-vertical-offset="1133">
@@ -1134,14 +1101,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/sklearn/utils/validation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3638" max-vertical-offset="4960">
-          <caret line="204" column="37" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/own_svm.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="3706" max-vertical-offset="4360">
@@ -1150,20 +1109,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data_transfor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2123" max-vertical-offset="2800">
+          <caret line="207" column="23" selection-start-line="207" selection-start-column="23" selection-end-line="207" selection-end-column="23" />
+          <folding>
+            <element signature="e#47#56#0" expanded="true" />
+            <element signature="e#174#869#0" expanded="false" />
+            <element signature="e#2290#3112#0" expanded="false" />
+            <element signature="e#3196#4644#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/sklearn/utils/validation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6836518" vertical-offset="3638" max-vertical-offset="4960">
+          <caret line="204" column="37" selection-start-line="204" selection-start-column="37" selection-end-line="204" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/sklearn/ensemble/weight_boosting.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334" vertical-offset="4736" max-vertical-offset="22180">
+          <caret line="259" column="0" selection-start-line="259" selection-start-column="0" selection-end-line="259" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="1840">
-          <caret line="58" column="37" selection-start-line="58" selection-start-column="37" selection-end-line="58" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="527" max-vertical-offset="1840">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
           <folding>
             <element signature="e#53#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classify_use_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="663" max-vertical-offset="3740">
+          <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
+          <folding>
+            <element signature="e#44#56#0" expanded="true" />
+            <element signature="e#4016#4676#0" expanded="false" />
+            <element signature="e#5546#6512#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1367" max-vertical-offset="2500">
-          <caret line="109" column="24" selection-start-line="109" selection-start-column="24" selection-end-line="109" selection-end-column="24" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1587" max-vertical-offset="2720">
+          <caret line="133" column="55" selection-start-line="133" selection-start-column="55" selection-end-line="133" selection-end-column="55" />
           <folding>
             <element signature="e#2382#2618#0" expanded="false" />
             <element signature="e#2651#2937#0" expanded="false" />
@@ -1171,38 +1170,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classify_use_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="127" max-vertical-offset="2940">
-          <caret line="33" column="4" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
-          <folding>
-            <element signature="e#44#56#0" expanded="true" />
-            <element signature="e#2451#3111#0" expanded="false" />
-            <element signature="e#3981#4947#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/auto_clustering_test_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.141218" vertical-offset="180" max-vertical-offset="2560">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.48808473" vertical-offset="1547" max-vertical-offset="2680">
+          <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
           <folding>
             <element signature="e#45#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_transfor.py">
+    <entry file="file://$PROJECT_DIR$/plot_geography.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6987952" vertical-offset="2146" max-vertical-offset="2800">
-          <caret line="208" column="0" selection-start-line="208" selection-start-column="0" selection-end-line="209" selection-end-column="0" />
-          <folding>
-            <element signature="e#47#56#0" expanded="true" />
-            <element signature="e#174#869#0" expanded="false" />
-            <element signature="e#2290#3112#0" expanded="false" />
-            <element signature="e#3196#4644#0" expanded="false" />
-          </folding>
+        <state vertical-scroll-proportion="0.0" vertical-offset="285" max-vertical-offset="540">
+          <caret line="15" column="34" selection-start-line="15" selection-start-column="34" selection-end-line="15" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/para_search.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="300" max-vertical-offset="1280">
+          <caret line="23" column="29" selection-start-line="23" selection-start-column="29" selection-end-line="23" selection-end-column="29" />
+          <folding />
         </state>
       </provider>
     </entry>

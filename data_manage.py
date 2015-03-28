@@ -53,7 +53,7 @@ class data_manage:
             sum = len(self.wifi)
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
-            for i in range(sum):
+            for i in range(sum-1):
 
                 t_pose = self.pose[i]
                 t_wifi = self.wifi[i]

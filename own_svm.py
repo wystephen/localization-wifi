@@ -21,7 +21,7 @@ class simpleSVM:
         return q
 
     # 先实现两个核函数
-    def Linear_kernel(selfx, z):
+    def Linear_kernel(self,x, z):
         return np.sum(x * z)
 
     def Gauss_kernel(x, z, sigma=2):

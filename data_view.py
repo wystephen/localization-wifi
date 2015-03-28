@@ -27,7 +27,7 @@ if __name__ == '__main__':
 
     plt.figure(1)
 
-    label, label_dict = data_transfor.pose_to_label(pose3, 3)
+    label, label_dict = data_transfor.pose_to_label(pose3, 1)
     last_label_num = 0
     for label_num in label:
         if label_num == last_label_num:

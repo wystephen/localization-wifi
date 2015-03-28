@@ -8,10 +8,10 @@ import matplotlib.pyplot as plt
 import data_transfor
 
 
-def svm_quick(data, label):
-    clf = svm.SVC()
+def svm_quick(data, label, kernel = 'linear'):
+    clf = svm.SVC(kernel = kernel, probability = True)
 
-    print clf.fit(data, label)  # 训练
+    clf.fit(data, label)  # 训练
 
     err = 0
     err_times = 0
@@ -21,7 +21,7 @@ def svm_quick(data, label):
         err += (ans[i] - label[i]) * (ans[i] - label[i])
         if abs(ans[i] - label[i]) > 2:
             err_times = err_times + 1
-            print 'ans:', ans[i], 'pose_label: ', label[i]  # 显示错误分类的结果，和真实类别
+           # print 'ans:', ans[i], 'pose_label: ', label[i]  # 显示错误分类的结果，和真实类别
             # print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
     print 'err:', err, 'err_times:', err_times
     print err_times * 100.0 / len(label), ' %'  # 分类错误率
@@ -49,7 +49,7 @@ def svm_test(wifi_file, pose_file):
         err += (ans[i] - pose_label[i]) * (ans[i] - pose_label[i])
         if abs(ans[i] - pose_label[i]) > 2:
             err_times = err_times + 1
-            print 'ans:', ans[i], 'pose_label: ', pose_label[i]  # 显示错误分类的结果，和真实类别
+            #print 'ans:', ans[i], 'pose_label: ', pose_label[i]  # 显示错误分类的结果，和真实类别
             # print err,'  ',err_times,' i:',i, 'i-err_times:' , i-err_times
     print 'err:', err, 'err_times:', err_times
     print err_times * 100.0 / len(pose_label), ' %'  # 分类错误

@@ -3,6 +3,7 @@ __author__ = 'steve'
 
 
 import numpy
+import math
 
 
 def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
@@ -102,6 +103,31 @@ def pose_dis(pose1,pose2):
         dis[i] = ((pose1[i,0]-pose2[i,0])**(2.0) +\
                   (pose2[i,1] - pose2[i,1])**(2.0))**(0.5)
     return dis
+
+#将信号强度转化为距离（变化趋势）
+def rss_dis(wifi):
+    wifi = wifi + 1
+    numpy.log(wifi,wifi)
+    #wifi = wifi * 10
+    #wifi = wifi* 14
+    return wifi
+
+#数据处理函数
+def data_transform(wifi):
+    '''
+    数据处理，各种方式都试试···
+    :param wifi:
+    :return:
+    '''
+    print 'wifi',wifi
+    for i in range(len(wifi[:,1])):
+        max_rssi = max(wifi[i,:])
+        wifi[i,:] = wifi[i,:] / max_rssi
+        for j in range(len(wifi[i,:])):
+            if wifi[i,j] < 0.4:
+                wifi[i,j] = 0.2
+    return wifi
+
 
 if __name__ == '__main__':
     pose, wifi = read_end_data('20153221527end_wifi.txt', '20153221527end_pose.txt')

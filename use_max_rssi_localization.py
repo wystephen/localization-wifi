@@ -59,6 +59,10 @@ def simple_location(pose, wifi, pose_array):
             pose_array[max_rssi[1,0],1]/4.0+\
             pose_array[max_rssi[2,0],1]/4.0+\
             pose_array[max_rssi[3,0],1]/4.0
+
+        #测试直接用最大的那个 看误差,效果不好
+        #out_pose[i,0] = pose_array[max_rssi[0,0],0]
+        #out_pose[i,1] = pose_array[max_rssi[0,0],1]
     return out_pose
 
 

@@ -119,13 +119,17 @@ def data_transform(wifi):
     :param wifi:
     :return:
     '''
-    print 'wifi',wifi
+    #print 'wifi',wifi
     for i in range(len(wifi[:,1])):
         max_rssi = max(wifi[i,:])
         wifi[i,:] = wifi[i,:] / max_rssi
         for j in range(len(wifi[i,:])):
-            if wifi[i,j] < 0.4:
-                wifi[i,j] = 0.2
+            if wifi[i,j] < 0.4 and wifi[i,j] > 0.1:
+                wifi[i,j] = 0.
+    #根据之前一段的强度值修正当前时刻强度值
+    delta_wifi = wifi
+    #for i in range(len(wifi[:,1])):
+
     return wifi
 
 

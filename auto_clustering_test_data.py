@@ -5,9 +5,10 @@ import numpy
 
 import matplotlib.pyplot as plt
 from sklearn.cluster import MiniBatchKMeans, KMeans, AffinityPropagation
-
+from sklearn.multiclass import OneVsRestClassifier
+from sklearn.multiclass import OneVsOneClassifier
 import data_transfor
-import svm
+import classify_use_test
 import data_preprocessing
 import data_manage
 
@@ -30,15 +31,23 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
     plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
     print '数据读取完毕'
-    K_means_type_num = 80
+    K_means_type_num = 100
     K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
     K_means.fit(half_wifi)
 
     print 'kmeans end'
     K_means_label = K_means.labels_
     #print K_means_label
-    ans, label, clf = svm.svm_quick(half_wifi, K_means_label)#,kernel='poly')
-
+    #支持向量机的语句
+    ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#,kernel='poly')
+    #随机森林
+    #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
+    #LDA
+    ans, label, clf = classify_use_test.LDA_quick(half_wifi,K_means_label)
+    #one vs one classifier
+    #ans, label, clf = classify_use_test.onevsone_quick(half_wifi,K_means_label)
+    #one_vs_rest
+    ans, label, clf = classify_use_test.onevsrest_quick(half_wifi,K_means_label)
     print 'train over'
 
     plt.figure(1)
@@ -61,11 +70,12 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     error_pose_num = 0
     error_pose = numpy.zeros([50000, 2])
     ##用另一组数据测试 ，看差值
+    predict_ans = clf.predict(half_wifi_test)
     for i in range(0, len(half_wifi_test)):
-        error[i] = ((landmark[(clf.predict(half_wifi_test[i, :])), 0] - half_pose_test[i, 0]) * \
-                    (landmark[(clf.predict(half_wifi_test[i, :])), 0] - half_pose_test[i, 0]) \
-                    + (landmark[clf.predict(half_wifi_test[i, :]), 1] - half_pose_test[i, 1]) * \
-                    (landmark[clf.predict(half_wifi_test[i, :]), 1] - half_pose_test[i, 1])) ** (0.5)
+        error[i] = ((landmark[predict_ans[i], 0] - half_pose_test[i, 0]) * \
+                    (landmark[predict_ans[i], 0] - half_pose_test[i, 0]) \
+                    + (landmark[predict_ans[i], 1] - half_pose_test[i, 1]) * \
+                    (landmark[predict_ans[i], 1] - half_pose_test[i, 1])) ** (0.5)
         #print error[i]
         if error[i] < 5.0:
             small_error += 1
@@ -85,6 +95,7 @@ def auto_clustering(half_pose,half_wifi,half_pose_test,half_wifi_test):
     plt.figure(5)
     plt.plot(error_pose[:, 0], error_pose[:, 1], 'o')
 
+
     #plt.show()
     return small_acc, big_acc
 
@@ -94,10 +105,11 @@ if __name__ == '__main__':
     num = 0
     for i in range(data.how_many()):
         for j in range(data.how_many()):
-            if i <= j or i < data.how_many()-1 or j<5:
+            if i <= j or j>5 :#or i < data.how_many()-1 :
                 continue
             pose,wifi = data.get_data(i)
             pose_test,wifi_test = data.get_data(j)
+            print 'len:', len(pose),'len_test',len(pose_test)
             acc_save[num,0] ,acc_save[num,1] = auto_clustering(pose,wifi,pose_test,wifi_test)
             num = num +1
             print '完成了：',((i*data.how_many())+(j))/((data.how_many())*(2.0))

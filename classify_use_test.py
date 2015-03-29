@@ -165,7 +165,7 @@ def svm_test(wifi_file, pose_file):
     print 'pose', pose
     # 以1.5m为间隔将数据离散化，
     pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 2)
-    clf = svm.SVC()
+    clf = svm.SVC(kernel = 'linear')
     print 'wifi', wifi
     print clf.fit(wifi, pose_label)  # 训练
 
@@ -191,10 +191,17 @@ def svm_test(wifi_file, pose_file):
 #
 #######################################################################
 if __name__ == '__main__':
-    clf, pose_label_dict_out = svm_test('sourcedata/201503141231/end_wifi.txt', 'data_save/31end_pose.txt')
+    clf, pose_label_dict_out = svm_test('data_save/20153141218end_wifi.txt', 'data_save/20153141218end_pose.txt')
+    #保存标志坐标
+    pose_landmark = numpy.zeros([len(pose_label_dict_out),2])
+    for key in pose_label_dict_out:
+       # print 'key:',key,'value:',pose_label_dict_out[key]
+        pose_landmark[key,:] = pose_label_dict_out[key]
+    print 'pose_lanmark:',pose_landmark
+    numpy.savetxt('tmp_pose_landmark',pose_landmark)
     # 没有尝试过交叉验证
-    test_pose = numpy.loadtxt('data_save/31end_pose.txt')
-    test_wifi = numpy.loadtxt('data_save/31end_wifi.txt')
+    test_pose = numpy.loadtxt('data_save/20153141231end_pose.txt')
+    test_wifi = numpy.loadtxt('data_save/20153141231end_wifi.txt')
 
     ans_pose_label = numpy.zeros(len(test_wifi))
     errs = numpy.zeros(len(test_wifi))
@@ -208,7 +215,7 @@ if __name__ == '__main__':
                        test_pose[i, 1])) ** (0.5)
         if errs[i] < 5.0:
             error_times += 1
-            print 'good', errs[i]
+            #print 'good', errs[i]
 
     plt.figure(1)
     print 'acc:', error_times * 1.0 / len(test_pose)

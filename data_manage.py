@@ -55,7 +55,7 @@ class data_manage:
             sum = len(self.wifi)
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
-            for i in range(sum-1):
+            for i in range(sum-3):
 
                 t_pose = self.pose[i]
                 t_wifi = self.wifi[i]
@@ -82,6 +82,9 @@ class data_manage:
         :return:
         '''
         return len(self.wifi)
+    def test_all_data(self):
+        return
+
 
 
 if __name__ == '__main__':

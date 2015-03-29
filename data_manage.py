@@ -31,11 +31,11 @@ class data_manage:
             self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
 
 
-            self.wifi.append(data_preprocessing.rate_rssi(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.rate_rssi(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.rate_rssi(numpy.loadtxt('data_save/2015325155end_wifi.txt') ) )
-            self.wifi.append(data_preprocessing.rate_rssi(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.rate_rssi(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
+            self.wifi.append(numpy.loadtxt('data_save/20153141231end_wifi.txt') )
+            self.wifi.append(numpy.loadtxt('data_save/20153221517end_wifi.txt') )
+            self.wifi.append(numpy.loadtxt('data_save/2015325155end_wifi.txt')  )
+            self.wifi.append(numpy.loadtxt('data_save/20153141218end_wifi.txt') )
+            self.wifi.append(numpy.loadtxt('data_save/20153221527end_wifi.txt') )
             #以上只包含单组数据，接下来尝试多组数据并行
             #sum = len(self.wifi)
             #for i in range(sum):

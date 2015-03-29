@@ -164,7 +164,7 @@ def svm_test(wifi_file, pose_file):
 
     print 'pose', pose
     # 以1.5m为间隔将数据离散化，
-    pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 2)
+    pose_label, pose_lable_dict = data_transfor.pose_to_label(pose, 1.5)
     clf = svm.SVC(kernel = 'linear')
     print 'wifi', wifi
     print clf.fit(wifi, pose_label)  # 训练
@@ -191,7 +191,7 @@ def svm_test(wifi_file, pose_file):
 #
 #######################################################################
 if __name__ == '__main__':
-    clf, pose_label_dict_out = svm_test('data_save/20153141218end_wifi.txt', 'data_save/20153141218end_pose.txt')
+    clf, pose_label_dict_out = svm_test('data_save/2015325155end_wifi.txt', 'data_save/2015325155end_pose.txt')
     #保存标志坐标
     pose_landmark = numpy.zeros([len(pose_label_dict_out),2])
     for key in pose_label_dict_out:

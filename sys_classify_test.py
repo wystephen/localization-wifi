@@ -41,11 +41,11 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
             if ((pose_label[j,0] - half_pose[i,0])**(2)+(pose_label[j,1]-half_pose[i,1])**2)**(0.5)<1.5:
                 K_means_label[i] = j
 
-    print 'kmeans end'
+    #print 'kmeans end'
 
     #print K_means_label
     #支持向量机的语句
-    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#,kernel='poly')
+    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label, kernel='linear')
     #随机森林
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
     #LDA
@@ -90,7 +90,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
                     + (landmark[predict_ans[i], 1] - half_pose_test[i, 1]) * \
                     (landmark[predict_ans[i], 1] - half_pose_test[i, 1])) ** (0.5)
         #print error[i]
-        if error[i] < 5.0:
+        if error[i] <= 5.0:
             small_error += 1
         if error[i] > 5.0 and error[i] < 7.0:
             error_pose[error_pose_num, :] = half_pose_test[i, :]
@@ -116,17 +116,21 @@ if __name__ == '__main__':
     data = data_manage.data_manage()
     acc_save = numpy.zeros([data.how_many()*data.how_many(),2])
     num = 0
-    for i in range(data.how_many()):
-        for j in range(data.how_many()):
-            if i < j or j>5 or j < data.how_many() -2 or i < data.how_many()-1 :
-                continue
-            pose,wifi = data.get_data(i)
-            pose_test,wifi_test = data.get_data(j)
-            print 'len:', len(pose),'len_test',len(pose_test)
-            acc_save[num,0] ,acc_save[num,1] = pose_test_func(pose,wifi,pose_test,wifi_test)
-            num = num +1
-            print '完成了：',((i*data.how_many())+(j))/((data.how_many())*(2.0))
-            print acc_save
+    #for i in range(data.how_many()):
+    #    for j in range(data.how_many()):
+    #        if i < j or j>5 or j < data.how_many() -2 or i < data.how_many()-1 :
+    #            continue
+    #        pose,wifi = data.get_data(i)
+    #        pose_test,wifi_test = data.get_data(j)
+    #        print 'len:', len(pose),'len_test',len(pose_test)
+    #        acc_save[num,0] ,acc_save[num,1] = pose_test_func(pose,wifi,pose_test,wifi_test)
+    #        num = num +1
+    #        print '完成了：',((i*data.how_many())+(j))/((data.how_many())*(2.0))
+    #        print acc_save
+    for i in range(data.how_many()-1):
+        pose, wifi, test_pose, test_wifi = data.get_full_test_data(i)
+        print 'pose',len(pose),'test_pose',len(test_pose)
+        acc_save[i,0], acc_save[i,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
 
     print acc_save
     plt.figure('总的正确率')

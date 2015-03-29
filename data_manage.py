@@ -76,6 +76,30 @@ class data_manage:
             print 'index 越界，index 最大为',len(self.wifi)
         return self.pose[index],self.wifi[index]
 
+    def get_full_test_data(self,index):
+        '''
+        这里的index代表不包含的数据集，返回其他所有的数据集
+        :param index:
+        :return:
+        '''
+        if index > (len(self.wifi) - 2 ):
+            print 'index 越界，index 最大为',len(self.wifi)-1
+        else:
+            sum = len(self.wifi)
+            tmp_pose = self.pose[0]
+            tmp_wifi = self.wifi[0]
+            for i in range(sum):
+                if i == index:
+                    continue
+                else:
+                    t_pose = self.pose[i]
+                    t_wifi = self.wifi[i]
+
+                    tmp_pose = numpy.append(tmp_pose,t_pose,axis = 0)
+                    tmp_wifi = numpy.append(tmp_wifi,t_wifi,axis =0)
+                #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
+            return tmp_pose,tmp_wifi, self.pose[index], self.wifi[index]
+
 
     def how_many(self):
         '''
@@ -83,6 +107,7 @@ class data_manage:
         '''
         return len(self.wifi)
     def test_all_data(self):
+
         return
 
 

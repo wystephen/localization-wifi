@@ -127,7 +127,7 @@ def data_transform(wifi):
         for j in range(len(wifi[i,:])):
             if wifi[i,j] < 0.4 and wifi[i,j] > 0.1:
                 wifi[i,j] = 0.2
-    print 'wifi[i,:] =- wifi[i,:] + max_rssi'
+    #print 'wifi[i,:] =- wifi[i,:] + max_rssi'
 
         #思路是 强度值除以本ap此次过程中的最小值····这里貌似没法处理···
 
@@ -144,7 +144,7 @@ def data_transform(wifi):
             rss_sum +=wifi[i,j]
             weight_rss_sum  +=(j*wifi[i,j])
             tmp_wifi[i,j] = wifi[i,j]
-        tmp_wifi[i,len(wifi[1,:])] = 1.0 *weight_rss_sum /rss_sum
+        tmp_wifi[i,len(wifi[1,:])] = 1.0 * weight_rss_sum /rss_sum/10.0
         #print tmp_wifi[i,len(wifi[1,:])]
     return tmp_wifi
 
@@ -166,7 +166,12 @@ def rate_rssi(wifi):
 
     return wifi
 
+#根据时间序列的规律扩大特征规模
+def sequence_wifi(wifi):
 
+
+
+    return wifi
 
 if __name__ == '__main__':
     pose, wifi = read_end_data('20153221527end_wifi.txt', '20153221527end_pose.txt')

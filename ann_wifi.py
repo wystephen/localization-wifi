@@ -2,6 +2,8 @@ __author__ = 'steve'
 # -*- coding: utf_8 -*-
 
 import numpy
+import data_manage
+import scipy
 
 from pybrain.structure import FeedForwardNetwork, LinearLayer, SigmoidLayer, TanhLayer, FullConnection
 from pybrain.supervised.trainers import BackpropTrainer

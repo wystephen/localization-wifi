@@ -26,10 +26,10 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     #half_pose, half_wifi = data_transfor.half_data_trans('data_save/31end_pose.txt',
     #                                             'data_save/31end_wifi.txt')
 
-    numpy.random.seed(0)
-    plt.figure(10)
-    plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
-    plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
+    #numpy.random.seed(0)
+    #plt.figure(10)
+    #plt.plot(half_pose_test[:, 0], half_pose_test[:, 1], 'or')
+    #plt.plot(half_pose[:, 0], half_pose[:, 1], 'ob')
     print '数据读取完毕'
     #K_means_type_num = 250
     #K_means = KMeans(init='random', n_clusters=K_means_type_num, n_init=10)
@@ -41,7 +41,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
             if ((pose_label[j,0] - half_pose[i,0])**(2)+(pose_label[j,1]-half_pose[i,1])**2)**(0.5)<1.5:
                 K_means_label[i] = j
 
-    #print 'kmeans end'
+    print 'kmeans end'
 
     #print K_means_label
     #支持向量机的语句
@@ -127,10 +127,17 @@ if __name__ == '__main__':
     #        num = num +1
     #        print '完成了：',((i*data.how_many())+(j))/((data.how_many())*(2.0))
     #        print acc_save
+
+    #完整测试代码···
     for i in range(data.how_many()-1):
-        pose, wifi, test_pose, test_wifi = data.get_full_test_data(i)
+        pose, wifi, test_pose, test_wifi = data.get_full_test_data(i,7)
         print 'pose',len(pose),'test_pose',len(test_pose)
         acc_save[i,0], acc_save[i,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
+        print '完成度：' , i/data.how_many()-1
+    #快速测试代码
+    #pose, wifi, test_pose, test_wifi = data.get_full_test_data(7,4)
+    #print 'pose',len(pose),'test_pose',len(test_pose)
+    #acc_save[1,0], acc_save[1,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
 
     print acc_save
     plt.figure('总的正确率')

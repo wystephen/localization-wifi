@@ -107,7 +107,8 @@ def pose_dis(pose1,pose2):
 #将信号强度转化为距离（变化趋势）
 def rss_dis(wifi):
     wifi = wifi + 1
-    numpy.log(wifi,wifi)
+    wifi = wifi /10.0
+    #numpy.log(wifi,wifi)
     #wifi = wifi * 10
     #wifi = wifi* 14
     return wifi
@@ -147,6 +148,34 @@ def data_transform(wifi):
         tmp_wifi[i,len(wifi[1,:])] = 1.0 * weight_rss_sum /rss_sum/10.0
         #print tmp_wifi[i,len(wifi[1,:])]
     return tmp_wifi
+
+def pre_process(wifi):
+    '''
+    对每一组数据进行单独的处理
+    :param wifi:
+    :return:
+    '''
+    #for i in range(len(wifi[1,:])):
+    #    var_dic = dict()
+    #    for j in range(len(wifi[:,i])):
+    #        if wifi[j,i] < 5:
+    #            wifi[j,i] = 0
+    #            continue
+    #        if wifi[j,i] not in var_dic:
+    #            var_dic[wifi[j,i]] = 1
+    #        else:
+    #            var_dic[wifi[j,i]] +=1
+    #    max_times  = 0
+    #    max_times_value = 0
+    #    for (k,v) in var_dic.items():
+    #        if max_times < v:
+    #            max_times_value = k
+    #
+    #    #print 'max_var:',max_times_value
+    #    for j in range(len(wifi[:,i])):
+    #        if wifi[j,i] == max_times_value:
+    #            wifi[j,i] = 0
+    return wifi
 
 def rate_rssi(wifi):
     '''

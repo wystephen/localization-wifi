@@ -29,13 +29,19 @@ class data_manage:
             self.pose.append(numpy.loadtxt('data_save/2015325155end_pose.txt')  )
             self.pose.append(numpy.loadtxt('data_save/20153141218end_pose.txt') )
             self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
+            self.pose.append(numpy.loadtxt('data_save/2015331116end_pose.txt'))
+            self.pose.append(numpy.loadtxt('data_save/20153311044end_pose.txt'))
+            self.pose.append(numpy.loadtxt('data_save/20153311115end_pose.txt'))
 
 
-            self.wifi.append(numpy.loadtxt('data_save/20153141231end_wifi.txt') )
-            self.wifi.append(numpy.loadtxt('data_save/20153221517end_wifi.txt') )
-            self.wifi.append(numpy.loadtxt('data_save/2015325155end_wifi.txt')  )
-            self.wifi.append(numpy.loadtxt('data_save/20153141218end_wifi.txt') )
-            self.wifi.append(numpy.loadtxt('data_save/20153221527end_wifi.txt') )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015325155end_wifi.txt'))  )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015331116end_wifi.txt')))
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
             #以上只包含单组数据，接下来尝试多组数据并行
             #sum = len(self.wifi)
             #for i in range(sum):
@@ -76,7 +82,7 @@ class data_manage:
             print 'index 越界，index 最大为',len(self.wifi)
         return self.pose[index],self.wifi[index]
 
-    def get_full_test_data(self,index):
+    def get_full_test_data(self,index,full_num):
         '''
         这里的index代表不包含的数据集，返回其他所有的数据集
         :param index:
@@ -88,8 +94,8 @@ class data_manage:
             sum = len(self.wifi)
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
-            for i in range(sum):
-                if i == index:
+            for i in range(sum-2):
+                if i == index or i < full_num :
                     continue
                 else:
                     t_pose = self.pose[i]

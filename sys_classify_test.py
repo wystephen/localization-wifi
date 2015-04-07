@@ -11,6 +11,7 @@ import data_transfor
 import classify_use_test
 import data_preprocessing
 import data_manage
+import multi_layer_class
 
 
 def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
@@ -44,22 +45,26 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     print 'kmeans end'
 
     #print K_means_label
-    #支持向量机的语句
-    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label, kernel='linear')
-    #随机森林
+    #支持向量机的语句，过得去 0.6（5m），0.1-0.2（5-7m）--disige--ok---第五个化成 rbf--效果不好
+    ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label, kernel='linear')
+    #随机森林，有问题？
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
-    #LDA
+    #LDA 效果很差。
     #ans, label, clf = classify_use_test.LDA_quick(half_wifi,K_means_label)
-    #one vs one classifier
+    #one vs one classifier--dierge
     #ans, label, clf = classify_use_test.onevsone_quick(half_wifi,K_means_label)
-    #one_vs_rest
+    #one_vs_rest---效果不行
     #ans, label, clf = classify_use_test.onevsrest_quick(half_wifi,K_means_label)
-    #adaboost
-    ans, label, clf = classify_use_test.adaboost_quick(half_wifi,K_means_label)
-    #knn
+    #adaboost--disange--不太稳定。
+    #ans, label, clf = classify_use_test.adaboost_quick(half_wifi,K_means_label)
+    #knn 不错 ， 同 支持向量机
     #ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
-    print 'train over'
+    #bayes--disange--效果差
+    #ans, label, clf = classify_use_test.bayes_quick(half_wifi,K_means_label)
 
+    #自己写的多个层次分开分类的分类器
+    #clf = multi_layer_class.multilayer(half_wifi,K_means_label,type_num=10)
+    print 'train over'
     plt.figure(1)
     plt.plot(K_means_label, 'o')
     plt.grid(1)
@@ -130,10 +135,11 @@ if __name__ == '__main__':
 
     #完整测试代码···
     for i in range(data.how_many()-1):
+        #test_pose, test_wifi, pose, wifi = data.get_full_test_data(i,7)
         pose, wifi, test_pose, test_wifi = data.get_full_test_data(i,7)
         print 'pose',len(pose),'test_pose',len(test_pose)
         acc_save[i,0], acc_save[i,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
-        print '完成度：' , i/data.how_many()-1
+        print '完成度：',i / 1.0/data.how_many()
     #快速测试代码
     #pose, wifi, test_pose, test_wifi = data.get_full_test_data(7,4)
     #print 'pose',len(pose),'test_pose',len(test_pose)

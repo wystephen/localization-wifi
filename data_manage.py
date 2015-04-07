@@ -95,7 +95,7 @@ class data_manage:
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
             for i in range(sum-2):
-                if i == index or i < full_num :
+                if i == index or i > full_num :
                     continue
                 else:
                     t_pose = self.pose[i]

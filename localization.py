@@ -38,4 +38,3 @@ class localization:
                     large_err +=1
             return err, small_err, big_err, large_err
 
-    def auto_test(self):

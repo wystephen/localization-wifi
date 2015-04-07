@@ -151,7 +151,7 @@ def data_transform(wifi):
 
 def pre_process(wifi):
     '''
-    对每一组数据进行单独的处理
+    对每一组数据进行单独的处理（datamanage 中刚刚加载开始进行处理）
     :param wifi:
     :return:
     '''
@@ -175,7 +175,16 @@ def pre_process(wifi):
     #    for j in range(len(wifi[:,i])):
     #        if wifi[j,i] == max_times_value:
     #            wifi[j,i] = 0
-    return wifi
+    p_wifi = numpy.zeros([len(wifi[:,1]),len(wifi[1,:])])
+
+    for i in range(0,len(wifi[:,1])-1):
+
+        if i < 10:
+            p_wifi[i,:] = wifi[i,:]
+        else:
+            for j in range(i-10,i):
+                p_wifi[i,:] += wifi[j,:]/10.0
+    return p_wifi
 
 def rate_rssi(wifi):
     '''

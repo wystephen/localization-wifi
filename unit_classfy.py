@@ -3,6 +3,7 @@ __author__ = 'Administrator'
 import numpy as np
 import matplotlib.pyplot as plt
 import  scipy as sp
+from sklearn.neighbors import KNeighborsClassifier
 
 from sklearn import svm
 
@@ -12,7 +13,7 @@ import data_transfor
 
 #这个类基本需要重新写过，思路如下
 '''
-    n组数据训练n个分类器，
+    n组数据训练n个分类器(svm knn)，
     对每一个结果由n个分类器分类，取众数或者平均数（若取平均数必须剔除误差特别大的结果）.
 
 '''
@@ -22,6 +23,8 @@ if __name__ == '__main__':
     type_size = data.how_many()-2
     clf_list = list()
     pose_landmark_label = np.loadtxt('tmp_pose_landmark')
+    err_pose = np.zeros([100000,2])
+    err_pose_index = 0
     for i in range(0,type_size):
         pose, wifi = data.get_data(i)
         pose, wifi = data_transfor.half_data_trans(pose,wifi)
@@ -36,9 +39,15 @@ if __name__ == '__main__':
             for  j in range(len(pose_landmark_label)):
                 if ((pose_landmark_label[j,0] - pose[k,0])**(2.0) + (pose_landmark_label[j,1]-pose[k,1])**2)**0.5<1.5:
                     pose_label [k] = j
+
         clf = svm.SVC(kernel = 'linear')
+        clf2 = KNeighborsClassifier(n_neighbors=5)
+
         clf.fit(wifi,pose_label)
+        clf2.fit(wifi,pose_label)
         clf_list.append(clf)
+        clf_list.append(clf2)
+
     for i in range(0,type_size):
         pose, wifi = data.get_data(i)
         pose, wifi = data_transfor.half_data_trans(pose,wifi)
@@ -81,7 +90,7 @@ if __name__ == '__main__':
                 pose_label_tmp = r_avg_label /(len(pose_label_tmp_arr) - err_num)
             else:
                 #如果保留的数据很少，就换一种方法求真实值
-                #用比较集中的5个的平均值作为输出
+                #用比较集中的3个的平均值作为输出
                 dis_label = np.zeros([len(pose_label_tmp_arr), len(pose_label_tmp_arr)])
                 for k in range(len(pose_label_tmp_arr)):
                     for kj in range(len(pose_label_tmp_arr)):
@@ -91,19 +100,22 @@ if __name__ == '__main__':
                     label_dis[k,0] = pose_label_tmp_arr[k]
                     label_dis[k,1] = sum(dis_label[k,:])
                 sorted_index = np.argsort(label_dis,axis=0)
-                #这里选择相聚比较近的 5 个求平均值
+                #这里选择相聚比较近的 3 个求平均值
                 for k in range(len(pose_label_tmp_arr)):
-                    if sorted_index[k,1] < 5:
-                        pose_label_tmp +=pose_label_tmp_arr[k] / 5.0
+                    if sorted_index[k,1] < 3:
+                        pose_label_tmp +=pose_label_tmp_arr[k] / 3.0
 
             #对于输出值进行滤波，如果偏差过大选择不变
             if last_label == -100:
                 last_label = pose_label_tmp
                 err_n_times = 1
+            elif err_n_times < 5 and abs(pose_label_tmp-last_label) < 3.0:
+
+                last_label = pose_label_tmp
             elif abs(pose_label_tmp - last_label) > 3.0 * err_n_times / 10.0:
                 err_n_times+=1
                 pose_label_tmp = last_label
-            elif abs(pose_label_tmp - last_label) <= 3.0 * err_n_times /  10.0:
+            elif abs(pose_label_tmp - last_label) <= 3.0 * err_n_times / 10.0:
                 last_label =  pose_label_tmp
                 err_n_times = 1
 
@@ -117,15 +129,20 @@ if __name__ == '__main__':
                 small_err += 1
             if err[j] <7.0:
                 big_err +=1
+            if err[j] > 10:
+                err_pose[err_pose_index,:] = pose[j,:]
+                err_pose_index += 1
             #print 'err', err[j]
-        np.savetxt(str('save_err/'+ str(i) + 'err.txt'),err)
+        np.savetxt(str('save_err/'+ str(i) + 'new-err.txt'),err)
         print 'err<5:',small_err,'err<7',big_err,'len_wifi',len(wifi)
         print 'err_acc<5',small_err / 1.0 /len(wifi),'err_acc<7:',big_err/1.0/len(wifi)
         plt.figure(j)
-        plt.plot(err)
+        plt.plot(err,'o')
         #plt.show(j)
 
     plt.show()
+    np.savetxt(str('save_err/') + 'err_pose.txt',err_pose)
+
 
 
 

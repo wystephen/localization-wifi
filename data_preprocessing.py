@@ -177,13 +177,14 @@ def pre_process(wifi):
     #            wifi[j,i] = 0
     p_wifi = numpy.zeros([len(wifi[:,1]),len(wifi[1,:])])
 
+    avg_num = 15
     for i in range(0,len(wifi[:,1])-1):
 
-        if i < 10:
+        if i < avg_num:
             p_wifi[i,:] = wifi[i,:]
         else:
-            for j in range(i-10,i):
-                p_wifi[i,:] += wifi[j,:]/10.0
+            for j in range(i-avg_num,i):
+                p_wifi[i,:] += wifi[j,:]/ avg_num
     return p_wifi
 
 def rate_rssi(wifi):

@@ -24,7 +24,10 @@ if __name__ == '__main__':
     pose_landmark_label = np.loadtxt('tmp_pose_landmark')
     for i in range(0,type_size):
         pose, wifi = data.get_data(i)
+        pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
+        if len(wifi) < 100:
+            pose, wifi = data.get_data(i)
         pose_label = np.zeros(len(wifi))
         wifi = data_preprocessing.rss_dis(wifi)
         wifi = data_preprocessing.data_transform(wifi)
@@ -38,6 +41,10 @@ if __name__ == '__main__':
         clf_list.append(clf)
     for i in range(0,type_size):
         pose, wifi = data.get_data(i)
+        pose, wifi = data_transfor.half_data_trans(pose,wifi)
+
+        if len(wifi) < 100:
+            pose, wifi = data.get_data(i)
         wifi = data_preprocessing.rss_dis(wifi)
         wifi = data_preprocessing.data_transform(wifi)
         err = np.zeros(len(wifi))

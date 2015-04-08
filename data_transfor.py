@@ -161,15 +161,15 @@ def file_trance(file, year, month, day, hours):
 
 
 def half_data_trans(end_pose, end_wifi):
-    fp = open(end_pose)
-    pose_list = fp.readlines()
-    fp.close()
-    fp = open(end_wifi)
-    wifi_list = fp.readlines()
-    fp.close()
+    #fp = open(end_pose)
+    pose_list = end_pose
+    #fp.close()
+    #fp = open(end_wifi)
+    wifi_list = end_wifi
+    #fp.close()
 
-    pose_array = numpy.loadtxt(end_pose)
-    wifi_array = numpy.loadtxt(end_wifi)
+    pose_array = end_pose
+    wifi_array = end_wifi
 
     save_i = 0
 
@@ -180,7 +180,7 @@ def half_data_trans(end_pose, end_wifi):
             break
 
     half_pose = numpy.zeros([save_i, 2])
-    half_wifi = numpy.zeros([save_i, len(wifi_array[12, :])])
+    half_wifi = numpy.zeros([save_i, len(wifi_array[1, :])])
 
     for i in range(0, save_i):
         half_pose[i, :] = pose_array[i, :]

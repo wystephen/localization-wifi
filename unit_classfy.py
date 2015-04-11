@@ -25,11 +25,14 @@ if __name__ == '__main__':
     pose_landmark_label = np.loadtxt('tmp_pose_landmark')
     err_pose = np.zeros([100000,2])
     err_pose_index = 0
+    pose_label_list = list()
+    out_label_list = list()
     for i in range(0,type_size):
         pose, wifi = data.get_data(i)
         pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
         if len(wifi) < 100:
+            #continue
             pose, wifi = data.get_data(i)
         pose_label = np.zeros(len(wifi))
         wifi = data_preprocessing.rss_dis(wifi)
@@ -40,20 +43,32 @@ if __name__ == '__main__':
                 if ((pose_landmark_label[j,0] - pose[k,0])**(2.0) + (pose_landmark_label[j,1]-pose[k,1])**2)**0.5<1.5:
                     pose_label [k] = j
 
+
         clf = svm.SVC(kernel = 'linear')
-        clf2 = KNeighborsClassifier(n_neighbors=5)
+        clf2 = KNeighborsClassifier(n_neighbors=3)
+
+        #保存 pose——label 到 list中方便之后训练。
+        pose_label_list.append(pose_label)
 
         clf.fit(wifi,pose_label)
         clf2.fit(wifi,pose_label)
         clf_list.append(clf)
         clf_list.append(clf2)
 
+
     for i in range(0,type_size):
+
         pose, wifi = data.get_data(i)
         pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
+
+
         if len(wifi) < 100:
+            #continue
             pose, wifi = data.get_data(i)
+
+            #保存输出的pose——label的数组
+        out_label_arr = np.zeros([len(pose),len(clf_list)])
         wifi = data_preprocessing.rss_dis(wifi)
         wifi = data_preprocessing.data_transform(wifi)
         err = np.zeros(len(wifi))
@@ -69,6 +84,11 @@ if __name__ == '__main__':
             for k in range(len(clf_list)):
                 the_clf = clf_list[k]
                 pose_label_tmp_arr[k]=the_clf.predict(wifi[j,:])
+
+
+            #这里实际上就已经得到了每个训练器训练的结果
+
+            out_label_arr[j,:] = pose_label_tmp_arr[:]
             #pose_label_tmp = pose_label_tmp / 1.0 / len(clf_list)
             #加上更加复杂的规则处理输出的训练结果
             pose_label_tmp = 0
@@ -86,7 +106,7 @@ if __name__ == '__main__':
                 else:
                     r_avg_label += pose_label_tmp_arr[k]
             #看是否满足至少保留了两组数据
-            if err_num < len(pose_label_tmp_arr) - 2 :
+            if err_num < len(pose_label_tmp_arr) - 4 :
                 pose_label_tmp = r_avg_label /(len(pose_label_tmp_arr) - err_num)
             else:
                 #如果保留的数据很少，就换一种方法求真实值
@@ -102,8 +122,8 @@ if __name__ == '__main__':
                 sorted_index = np.argsort(label_dis,axis=0)
                 #这里选择相聚比较近的 3 个求平均值
                 for k in range(len(pose_label_tmp_arr)):
-                    if sorted_index[k,1] < 3:
-                        pose_label_tmp +=pose_label_tmp_arr[k] / 3.0
+                    if sorted_index[k,1] < 5:
+                        pose_label_tmp +=pose_label_tmp_arr[k] / 5.0
 
             #对于输出值进行滤波，如果偏差过大选择不变
             if last_label == -100:
@@ -119,10 +139,6 @@ if __name__ == '__main__':
                 last_label =  pose_label_tmp
                 err_n_times = 1
 
-
-
-
-
             err[j] = ((pose[j,0]-pose_landmark_label[int(pose_label_tmp),0])**(2.0) +
                       (pose[j,1] - pose_landmark_label[int(pose_label_tmp),1])**(2.0))**(0.5)
             if err[j] < 5.0:
@@ -133,12 +149,22 @@ if __name__ == '__main__':
                 err_pose[err_pose_index,:] = pose[j,:]
                 err_pose_index += 1
             #print 'err', err[j]
+        out_label_list.append(out_label_arr)
         np.savetxt(str('save_err/'+ str(i) + 'new-err.txt'),err)
         print 'err<5:',small_err,'err<7',big_err,'len_wifi',len(wifi)
         print 'err_acc<5',small_err / 1.0 /len(wifi),'err_acc<7:',big_err/1.0/len(wifi)
         plt.figure(j)
         plt.plot(err,'o')
         #plt.show(j)
+
+    #将所有的 pose_label和 out_label保存。
+    for k in range(len(pose_label_list)):
+        p_label_tmp = pose_label_list[k]
+        o_label_tmp = out_label_list[k]
+        np.savetxt(str('label_save/'+str(k)+'pose'),p_label_tmp)
+        np.savetxt(str('label_save/'+str(k)+'pose'),o_label_tmp)
+
+
 
     plt.show()
     np.savetxt(str('save_err/') + 'err_pose.txt',err_pose)

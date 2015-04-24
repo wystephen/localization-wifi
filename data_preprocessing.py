@@ -204,6 +204,11 @@ def rate_rssi(wifi):
             wifi[i,j] = wifi[i,j] / min_rssi[j]
 
     return wifi
+def least_d(wifi):
+    out_wifi= numpy.zeros([len(wifi[:,1]),28])
+    for i in range(len(out_wifi[1,:])):
+        out_wifi[:,i] = wifi[:,i*2]/2.0 +wifi[:,i*2+1]/2.0
+    return out_wifi
 
 #根据时间序列的规律扩大特征规模
 def sequence_wifi(wifi):

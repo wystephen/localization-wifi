@@ -46,7 +46,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
 
     #print K_means_label
     #支持向量机的语句，过得去 0.6（5m），0.1-0.2（5-7m）--disige--ok---第五个化成 rbf--效果不好
-    ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label, kernel='linear')
+    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label, kernel='linear')
     #随机森林，有问题？
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
     #LDA 效果很差。
@@ -58,7 +58,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     #adaboost--disange--不太稳定。
     #ans, label, clf = classify_use_test.adaboost_quick(half_wifi,K_means_label)
     #knn 不错 ， 同 支持向量机
-    #ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
+    ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
     #bayes--disange--效果差
     #ans, label, clf = classify_use_test.bayes_quick(half_wifi,K_means_label)
 
@@ -136,9 +136,9 @@ if __name__ == '__main__':
     #完整测试代码···
     for i in range(data.how_many()-1):
         #test_pose, test_wifi, pose, wifi = data.get_full_test_data(i,7)
-        pose, wifi, test_pose, test_wifi = data.get_full_test_data(i,7)
+        pose, wifi, test_pose, test_wifi = data.get_full_test_data(i,5)
         print 'pose',len(pose),'test_pose',len(test_pose)
-        acc_save[i,0], acc_save[i,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
+        acc_save[i,0], acc_save[i,1] = pose_test_func(pose,wifi,pose,wifi)#注意看这一句
         print '完成度：',i / 1.0/data.how_many()
     #快速测试代码
     #pose, wifi, test_pose, test_wifi = data.get_full_test_data(7,4)

@@ -24,44 +24,60 @@ class data_manage:
             #self.pose = list()
             #self.wifi = list()
 
-            self.pose.append(numpy.loadtxt('data_save/20153141231end_pose.txt') )
-            self.pose.append(numpy.loadtxt('data_save/20153221517end_pose.txt') )
-            self.pose.append(numpy.loadtxt('data_save/2015325155end_pose.txt')  )
-            self.pose.append(numpy.loadtxt('data_save/20153141218end_pose.txt') )
-            self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
-            self.pose.append(numpy.loadtxt('data_save/2015331116end_pose.txt'))
-            self.pose.append(numpy.loadtxt('data_save/20153311044end_pose.txt'))
-            self.pose.append(numpy.loadtxt('data_save/20153311115end_pose.txt'))
-
-
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015325155end_wifi.txt'))  )
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015331116end_wifi.txt')))
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
-            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
-            #以上只包含单组数据，接下来尝试多组数据并行
-            #sum = len(self.wifi)
-            #for i in range(sum):
-            #    for j in range(sum):
-            #        if j == i:
-            #            continue
-            #        tmp_pose = self.pose[0]
-            #        tmp_wifi = self.wifi[0]
-            #        t_pose = self.pose[i]
-            #        t_wifi = self.wifi[i]
+            #self.pose.append(numpy.loadtxt('data_save/20153141231end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/20153221517end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/2015325155end_pose.txt')  )
+            #self.pose.append(numpy.loadtxt('data_save/20153141218end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/2015331116end_pose.txt'))
+            #self.pose.append(numpy.loadtxt('data_save/20153311044end_pose.txt'))
+            #self.pose.append(numpy.loadtxt('data_save/20153311115end_pose.txt'))
             #
-            #        pose_sum = numpy.append(tmp_pose,t_pose,axis = 0)
-            #        wifi_sum = numpy.append(tmp_wifi,t_wifi,axis =0)
-            #        #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
-            #        self.pose.append(pose_sum)
-            #        self.wifi.append(wifi_sum)
-            sum = len(self.wifi)
+            #
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015325155end_wifi.txt'))  )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015331116end_wifi.txt')))
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
+
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20154241516n_end_wifi.txt')))
+            self.pose.append(numpy.loadtxt('data_save/20154241516n_end_pose.txt'))
+
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015424151n_end_wifi.txt')))
+            self.pose.append(numpy.loadtxt('data_save/2015424151n_end_pose.txt'))
+
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20154241432n_end_wifi.txt')))
+            self.pose.append((numpy.loadtxt('data_save/20154241432n_end_pose.txt')))
+
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20154241415n_end_wifi.txt')))
+            self.pose.append((numpy.loadtxt('data_save/20154241415n_end_pose.txt')))
+
+            self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20154241346n_end_wifi.txt')))
+            self.pose.append((numpy.loadtxt('data_save/20154241346n_end_pose.txt')))
+
+            #以上只包含单组数据，接下来尝试多组数据并行
+            sumt = len(self.wifi)
+            for i in range(sumt):
+                for j in range(sumt):
+                    if j == i:
+                        continue
+                    tmp_pose = self.pose[0]
+                    tmp_wifi = self.wifi[0]
+                    t_pose = self.pose[i]
+                    t_wifi = self.wifi[i]
+
+                    pose_sum = numpy.append(tmp_pose,t_pose,axis = 0)
+                    wifi_sum = numpy.append(tmp_wifi,t_wifi,axis =0)
+                    #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
+                    self.pose.append(pose_sum)
+                    self.wifi.append(wifi_sum)
+            sumt = len(self.wifi)
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
-            for i in range(sum-3):
+            for i in range(sumt-3):
 
                 t_pose = self.pose[i]
                 t_wifi = self.wifi[i]

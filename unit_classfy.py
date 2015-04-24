@@ -20,14 +20,16 @@ import data_transfor
 
 if __name__ == '__main__':
     data =  data_manage.data_manage()
-    type_size = data.how_many()-2
+    type_size = 5# data.how_many()-2
     clf_list = list()
     pose_landmark_label = np.loadtxt('tmp_pose_landmark')
     err_pose = np.zeros([100000,2])
     err_pose_index = 0
     pose_label_list = list()
     out_label_list = list()
-    for i in range(0,type_size):
+    for i in range(0,type_size-1):
+        #if i == 4:
+        #    continue
         pose, wifi = data.get_data(i)
         pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
@@ -35,8 +37,10 @@ if __name__ == '__main__':
             #continue
             pose, wifi = data.get_data(i)
         pose_label = np.zeros(len(wifi))
+        #对wifi信号的处理过程
         wifi = data_preprocessing.rss_dis(wifi)
         wifi = data_preprocessing.data_transform(wifi)
+        wifi = data_preprocessing.least_d(wifi)
         #把pose 转换成 标签
         for k in range(len(pose[:,1])):
             for  j in range(len(pose_landmark_label)):
@@ -71,6 +75,7 @@ if __name__ == '__main__':
         out_label_arr = np.zeros([len(pose),len(clf_list)])
         wifi = data_preprocessing.rss_dis(wifi)
         wifi = data_preprocessing.data_transform(wifi)
+        wifi = data_preprocessing.least_d(wifi)
         err = np.zeros(len(wifi))
         #针对每一wifi信号处理定位结果
         last_label = -100
@@ -161,8 +166,8 @@ if __name__ == '__main__':
     for k in range(len(pose_label_list)):
         p_label_tmp = pose_label_list[k]
         o_label_tmp = out_label_list[k]
-        np.savetxt(str('label_save/'+str(k)+'pose'),p_label_tmp)
-        np.savetxt(str('label_save/'+str(k)+'pose'),o_label_tmp)
+        np.savetxt(str('label_save/'+str(k)+'pose_nnr'),p_label_tmp)
+        np.savetxt(str('label_save/'+str(k)+'out_nnr'),o_label_tmp)
 
 
 

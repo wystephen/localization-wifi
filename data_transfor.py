@@ -220,7 +220,7 @@ if __name__ == '__main__':
     data_save_dir = 'data_save/'
 
     data_preprocessing.sync_timeline(wifi_file='out_wifi.txt', pose_file=laser_file, pose_out=str(
-        data_save_dir + year + month + day + hours + minutes + 'end_pose.txt'),
+        data_save_dir + year + month + day + hours + minutes + 'n_end_pose.txt'),
                                      wifi_out=str(
-                                         data_save_dir + year + month + day + hours + minutes + 'end_wifi.txt'))
+                                         data_save_dir + year + month + day + hours + minutes + 'n_end_wifi.txt'))
     print '完成数据转化，保存结果到 end_pose.txt 和 end_wifi.txt'

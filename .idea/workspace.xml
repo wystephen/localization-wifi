@@ -2,24 +2,26 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f04538-5c36-4bb2-ae3e-b07ede1a6f9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/choice_regular.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/n_test1" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/n_test2" />
-      <change type="MOVED" beforePath="C:\localization-wifi\unit_to_rel.py" afterPath="$PROJECT_DIR$/unit_to_rel_ann.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/D_value_class.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/0new-err.txt" afterPath="$PROJECT_DIR$/save_err/0new-err.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/0out_nnr" afterPath="$PROJECT_DIR$/label_save/0out_nnr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/0pose_nnr" afterPath="$PROJECT_DIR$/label_save/0pose_nnr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/1new-err.txt" afterPath="$PROJECT_DIR$/save_err/1new-err.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/1out_nnr" afterPath="$PROJECT_DIR$/label_save/1out_nnr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/1pose_nnr" afterPath="$PROJECT_DIR$/label_save/1pose_nnr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/2new-err.txt" afterPath="$PROJECT_DIR$/save_err/2new-err.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/2out_nnr" afterPath="$PROJECT_DIR$/label_save/2out_nnr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/2pose_nnr" afterPath="$PROJECT_DIR$/label_save/2pose_nnr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/3new-err.txt" afterPath="$PROJECT_DIR$/save_err/3new-err.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/3out_nnr" afterPath="$PROJECT_DIR$/label_save/3out_nnr" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/label_save/3pose_nnr" afterPath="$PROJECT_DIR$/label_save/3pose_nnr" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/4new-err.txt" afterPath="$PROJECT_DIR$/save_err/4new-err.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/5new-err.txt" afterPath="$PROJECT_DIR$/save_err/5new-err.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/6new-err.txt" afterPath="$PROJECT_DIR$/save_err/6new-err.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classify_use_test.py" afterPath="$PROJECT_DIR$/classify_use_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_manage.py" afterPath="$PROJECT_DIR$/data_manage.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_preprocessing.py" afterPath="$PROJECT_DIR$/data_preprocessing.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_transfor.py" afterPath="$PROJECT_DIR$/data_transfor.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_err/err_pose.txt" afterPath="$PROJECT_DIR$/save_err/err_pose.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out_wifi.txt" afterPath="$PROJECT_DIR$/out_wifi.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/save_the_train.txt" afterPath="$PROJECT_DIR$/save_the_train.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys_classify_test.py" afterPath="$PROJECT_DIR$/sys_classify_test.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tmp_pose_landmark" afterPath="$PROJECT_DIR$/tmp_pose_landmark" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/unit_classfy.py" afterPath="$PROJECT_DIR$/unit_classfy.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -47,21 +49,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="data_transfor.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_transfor.py">
+      <file leaf-file-name="about_landmark.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/about_landmark.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4080" max-vertical-offset="4520">
-              <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+              <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classify_use_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/classify_use_test.py">
+      <file leaf-file-name="choice_regular.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/choice_regular.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3992" max-vertical-offset="4900">
-              <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.17985612" vertical-offset="220" max-vertical-offset="1420">
+              <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -70,28 +72,8 @@
       <file leaf-file-name="data_preprocessing.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4132" max-vertical-offset="4560">
-              <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="sys_classify_test.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.33333334" vertical-offset="537" max-vertical-offset="2960">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="unit_classfy.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/unit_classfy.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="3540">
-              <caret line="174" column="58" selection-start-line="174" selection-start-column="58" selection-end-line="174" selection-end-column="58" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4004" max-vertical-offset="4560">
+              <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -100,8 +82,8 @@
       <file leaf-file-name="data_manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1098" max-vertical-offset="2880">
-              <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2500" max-vertical-offset="3160">
+              <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
               <folding>
                 <element signature="e#53#62#0" expanded="true" />
               </folding>
@@ -109,10 +91,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="unit_classfy.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit_classfy.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3540">
+              <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="117" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="data_view.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_view.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="912" max-vertical-offset="1340">
+            <state vertical-scroll-proportion="0.0" vertical-offset="784" max-vertical-offset="1340">
               <caret line="30" column="22" selection-start-line="30" selection-start-column="22" selection-end-line="30" selection-end-column="22" />
               <folding>
                 <element signature="e#53#84#0" expanded="true" />
@@ -168,16 +160,17 @@
         <option value="$PROJECT_DIR$/multi_layer_class.py" />
         <option value="$PROJECT_DIR$/localization.py" />
         <option value="$PROJECT_DIR$/unit_power_class.py" />
-        <option value="$PROJECT_DIR$/classify_use_test.py" />
         <option value="$PROJECT_DIR$/unit_to_rel.py" />
         <option value="$PROJECT_DIR$/choice_regular.py" />
         <option value="$PROJECT_DIR$/unit_to_rel_ann.py" />
         <option value="$PROJECT_DIR$/data_transfor.py" />
         <option value="$PROJECT_DIR$/n_test1" />
-        <option value="$PROJECT_DIR$/data_manage.py" />
         <option value="$PROJECT_DIR$/n_test2" />
-        <option value="$PROJECT_DIR$/data_preprocessing.py" />
+        <option value="$PROJECT_DIR$/classify_use_test.py" />
         <option value="$PROJECT_DIR$/unit_classfy.py" />
+        <option value="$PROJECT_DIR$/D_value_class.py" />
+        <option value="$PROJECT_DIR$/data_preprocessing.py" />
+        <option value="$PROJECT_DIR$/data_manage.py" />
         <option value="$PROJECT_DIR$/sys_classify_test.py" />
       </list>
     </option>
@@ -185,8 +178,8 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1552" />
-    <option name="height" value="842" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -267,44 +260,6 @@
     </option>
   </component>
   <component name="RunManager" selected="Python.sys_classify_test">
-    <configuration default="false" name="data_transfor" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="localization-wifi" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_transfor.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
-    <configuration default="false" name="data_manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="localization-wifi" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_manage.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <RunnerSettings RunnerId="PythonRunner" />
-      <ConfigurationWrapper RunnerId="PythonRunner" />
-      <method />
-    </configuration>
     <configuration default="false" name="sys_classify_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -358,6 +313,44 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="localization-wifi" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/multi_layer_class.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="classify_use_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="localization-wifi" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/classify_use_test.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="D_value_class" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="localization-wifi" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/D_value_class.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -609,19 +602,19 @@
       <item index="3" class="java.lang.String" itemvalue="Python.svm" />
       <item index="4" class="java.lang.String" itemvalue="Python.syn" />
       <item index="5" class="java.lang.String" itemvalue="Python.time_transform" />
-      <item index="6" class="java.lang.String" itemvalue="Python.data_transfor" />
-      <item index="7" class="java.lang.String" itemvalue="Python.data_manage" />
-      <item index="8" class="java.lang.String" itemvalue="Python.sys_classify_test" />
-      <item index="9" class="java.lang.String" itemvalue="Python.unit_classfy" />
-      <item index="10" class="java.lang.String" itemvalue="Python.multi_layer_class" />
+      <item index="6" class="java.lang.String" itemvalue="Python.sys_classify_test" />
+      <item index="7" class="java.lang.String" itemvalue="Python.unit_classfy" />
+      <item index="8" class="java.lang.String" itemvalue="Python.multi_layer_class" />
+      <item index="9" class="java.lang.String" itemvalue="Python.classify_use_test" />
+      <item index="10" class="java.lang.String" itemvalue="Python.D_value_class" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.sys_classify_test" />
         <item index="1" class="java.lang.String" itemvalue="Python.unit_classfy" />
-        <item index="2" class="java.lang.String" itemvalue="Python.multi_layer_class" />
-        <item index="3" class="java.lang.String" itemvalue="Python.data_manage" />
-        <item index="4" class="java.lang.String" itemvalue="Python.data_transfor" />
+        <item index="2" class="java.lang.String" itemvalue="Python.D_value_class" />
+        <item index="3" class="java.lang.String" itemvalue="Python.classify_use_test" />
+        <item index="4" class="java.lang.String" itemvalue="Python.multi_layer_class" />
       </list>
     </recent_temporary>
   </component>
@@ -717,29 +710,29 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1552" height="842" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21334215" sideWeight="0.51859957" order="0" side_tool="true" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21279761" sideWeight="0.51859957" order="0" side_tool="true" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59297216" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33040935" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2926024" sideWeight="0.48140043" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2716763" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20123361" sideWeight="0.50119907" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39473686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3294509" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.382906" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32796487" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39473686" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -812,13 +805,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/mac_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.008922" vertical-offset="0" max-vertical-offset="1495">
-          <caret line="59" column="17" selection-start-line="59" selection-start-column="17" selection-end-line="59" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/laser&amp;wifi/201503141231/out_pose_laser.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.17267267" vertical-offset="0" max-vertical-offset="508553">
@@ -964,20 +950,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/about_landmark.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/auto_clustering_test_data.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1320" max-vertical-offset="2500">
-          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="77" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ann_wifi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="1400">
@@ -1063,18 +1035,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/choice_regular.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.123565756" vertical-offset="0" max-vertical-offset="1480">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_cmd">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.1754386" vertical-offset="0" max-vertical-offset="456">
           <caret line="4" column="1" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1082,7 +1046,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33647057" vertical-offset="13737" max-vertical-offset="37100">
           <caret line="714" column="0" selection-start-line="714" selection-start-column="0" selection-end-line="714" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,7 +1053,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5887446" vertical-offset="8" max-vertical-offset="780">
           <caret line="21" column="50" selection-start-line="21" selection-start-column="50" selection-end-line="21" selection-end-column="50" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1060,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="475">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,7 +1067,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.29473683" vertical-offset="0" max-vertical-offset="475">
           <caret line="7" column="2" selection-start-line="7" selection-start-column="2" selection-end-line="7" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1114,7 +1074,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.4285715" vertical-offset="840" max-vertical-offset="1920">
           <caret line="84" column="40" selection-start-line="84" selection-start-column="40" selection-end-line="84" selection-end-column="40" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1122,30 +1081,51 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.2429906" vertical-offset="692" max-vertical-offset="1720">
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_transfor.py">
+    <entry file="file://$PROJECT_DIR$/auto_clustering_test_data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="420" max-vertical-offset="4520">
-          <caret line="40" column="30" selection-start-line="40" selection-start-column="30" selection-end-line="40" selection-end-column="30" />
-          <folding />
+        <state vertical-scroll-proportion="-1.0863309" vertical-offset="1944" max-vertical-offset="2500">
+          <caret line="76" column="19" selection-start-line="76" selection-start-column="19" selection-end-line="77" selection-end-column="45" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/classify_use_test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="258" max-vertical-offset="4900">
-          <caret line="238" column="0" selection-start-line="238" selection-start-column="0" selection-end-line="238" selection-end-column="0" />
-          <folding />
+        <state vertical-scroll-proportion="2.753223" vertical-offset="2625" max-vertical-offset="4900">
+          <caret line="217" column="59" selection-start-line="217" selection-start-column="59" selection-end-line="217" selection-end-column="59" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
+    <entry file="file://$PROJECT_DIR$/data_transfor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3420" max-vertical-offset="4560">
-          <caret line="179" column="16" selection-start-line="179" selection-start-column="16" selection-end-line="179" selection-end-column="16" />
+        <state vertical-scroll-proportion="-11.279635" vertical-offset="4191" max-vertical-offset="4520">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/D_value_class.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.29040736" vertical-offset="199" max-vertical-offset="980">
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05913272" vertical-offset="1135" max-vertical-offset="3300">
+          <caret line="59" column="23" selection-start-line="59" selection-start-column="23" selection-end-line="59" selection-end-column="23" />
+          <folding>
+            <element signature="e#53#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/about_landmark.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="180">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1160,28 +1140,36 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/unit_classfy.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="3540">
+          <caret line="46" column="114" selection-start-line="46" selection-start-column="114" selection-end-line="46" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data_manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="798" max-vertical-offset="2880">
-          <caret line="49" column="64" selection-start-line="49" selection-start-column="64" selection-end-line="49" selection-end-column="64" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2500" max-vertical-offset="3160">
+          <caret line="135" column="0" selection-start-line="135" selection-start-column="0" selection-end-line="135" selection-end-column="0" />
           <folding>
             <element signature="e#53#62#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit_classfy.py">
+    <entry file="file://$PROJECT_DIR$/data_preprocessing.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3111" max-vertical-offset="3540">
-          <caret line="174" column="58" selection-start-line="174" selection-start-column="58" selection-end-line="174" selection-end-column="58" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4048" max-vertical-offset="4560">
+          <caret line="218" column="0" selection-start-line="218" selection-start-column="0" selection-end-line="218" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
+    <entry file="file://$PROJECT_DIR$/choice_regular.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334" vertical-offset="537" max-vertical-offset="2960">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.17985612" vertical-offset="220" max-vertical-offset="1420">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
           <folding />
         </state>
       </provider>

@@ -31,7 +31,7 @@ if __name__ == '__main__':
         #if i == 4:
         #    continue
         pose, wifi = data.get_data(i)
-        pose, wifi = data_transfor.half_data_trans(pose,wifi)
+        #pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
         if len(wifi) < 100:
             #continue
@@ -49,7 +49,7 @@ if __name__ == '__main__':
 
 
         clf = svm.SVC(kernel = 'linear')
-        clf2 = KNeighborsClassifier(n_neighbors=3)
+        clf2 = KNeighborsClassifier(n_neighbors=5)
 
         #保存 pose——label 到 list中方便之后训练。
         pose_label_list.append(pose_label)
@@ -63,7 +63,7 @@ if __name__ == '__main__':
     for i in range(0,type_size):
 
         pose, wifi = data.get_data(i)
-        pose, wifi = data_transfor.half_data_trans(pose,wifi)
+        #pose, wifi = data_transfor.half_data_trans(pose,wifi)
 
 
 

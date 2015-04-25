@@ -177,7 +177,7 @@ def pre_process(wifi):
     #            wifi[j,i] = 0
     p_wifi = numpy.zeros([len(wifi[:,1]),len(wifi[1,:])])
 
-    avg_num = 15
+    avg_num = 5
     for i in range(0,len(wifi[:,1])-1):
 
         if i < avg_num:

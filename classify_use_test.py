@@ -211,7 +211,7 @@ def svm_test(wifi_file, pose_file):
 #
 #######################################################################
 if __name__ == '__main__':
-    clf, pose_label_dict_out = svm_test('data_save/2015325155end_wifi.txt', 'data_save/2015325155end_pose.txt')
+    clf, pose_label_dict_out = svm_test('data_save/20154241415n_end_wifi.txt', 'data_save/20154241415n_end_pose.txt')
     #保存标志坐标
     pose_landmark = numpy.zeros([len(pose_label_dict_out),2])
     for key in pose_label_dict_out:

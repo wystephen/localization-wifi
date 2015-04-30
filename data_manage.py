@@ -50,6 +50,8 @@ class data_manage:
             #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
             #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
 
+
+#           新数据
             self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20154241516n_end_wifi.txt')))
             self.pose.append(numpy.loadtxt('data_save/20154241516n_end_pose.txt'))
 
@@ -66,34 +68,34 @@ class data_manage:
             self.pose.append((numpy.loadtxt('data_save/20154241346n_end_pose.txt')))
 
             #以上只包含单组数据，接下来尝试多组数据并行
-            sumt = len(self.wifi)
-            for i in range(sumt):
-                for j in range(sumt):
-                    if j == i:
-                        continue
-                    tmp_pose = self.pose[0]
-                    tmp_wifi = self.wifi[0]
-                    t_pose = self.pose[i]
-                    t_wifi = self.wifi[i]
-
-                    pose_sum = numpy.append(tmp_pose,t_pose,axis = 0)
-                    wifi_sum = numpy.append(tmp_wifi,t_wifi,axis =0)
-                    #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
-                    self.pose.append(pose_sum)
-                    self.wifi.append(wifi_sum)
-            sumt = len(self.wifi)
-            tmp_pose = self.pose[0]
-            tmp_wifi = self.wifi[0]
-            for i in range(sumt-3):
-
-                t_pose = self.pose[i]
-                t_wifi = self.wifi[i]
-
-                tmp_pose = numpy.append(tmp_pose,t_pose,axis = 0)
-                tmp_wifi = numpy.append(tmp_wifi,t_wifi,axis =0)
-                #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
-            self.pose.append(tmp_pose)
-            self.wifi.append(tmp_wifi)
+            #sumt = len(self.wifi)
+            #for i in range(sumt):
+            #    for j in range(sumt):
+            #        if j == i:
+            #            continue
+            #        tmp_pose = self.pose[0]
+            #        tmp_wifi = self.wifi[0]
+            #        t_pose = self.pose[i]
+            #        t_wifi = self.wifi[i]
+            #
+            #        pose_sum = numpy.append(tmp_pose,t_pose,axis = 0)
+            #        wifi_sum = numpy.append(tmp_wifi,t_wifi,axis =0)
+            #        #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
+            #        self.pose.append(pose_sum)
+            #        self.wifi.append(wifi_sum)
+            #sumt = len(self.wifi)
+            #tmp_pose = self.pose[0]
+            #tmp_wifi = self.wifi[0]
+            #for i in range(sumt-3):
+            #
+            #    t_pose = self.pose[i]
+            #    t_wifi = self.wifi[i]
+            #
+            #    tmp_pose = numpy.append(tmp_pose,t_pose,axis = 0)
+            #    tmp_wifi = numpy.append(tmp_wifi,t_wifi,axis =0)
+            #    #print 'wifi:',wifi_sum,'pose_sum:',pose_sum
+            #self.pose.append(tmp_pose)
+            #self.wifi.append(tmp_wifi)
 
 
 
@@ -117,16 +119,18 @@ class data_manage:
         :param index:
         :return:
         '''
-        if index > (len(self.wifi) - 2 ):
+        if index > (len(self.wifi) ):
             print 'index 越界，index 最大为',len(self.wifi)-1
         else:
             sum = len(self.wifi)
             tmp_pose = self.pose[0]
             tmp_wifi = self.wifi[0]
-            for i in range(sum-2):
+            for i in range(sum):
                 if i == index or i > full_num :
                     continue
+
                 else:
+                    print 'i:',i,'index',index
                     t_pose = self.pose[i]
                     t_wifi = self.wifi[i]
 

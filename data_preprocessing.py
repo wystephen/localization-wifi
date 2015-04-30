@@ -30,7 +30,10 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
     pose_time_array = numpy.zeros(len(pose_list))
     for pose_data in pose_list:
         pose_data_tmp = pose_data.split(' ')
-        pose_time_array[pose_list.index(pose_data)] = pose_data_tmp[0]
+        print pose_data_tmp
+        if len(pose_data_tmp)>2:
+            pose_time_array[pose_list.index(pose_data)] = pose_data_tmp[0]
+
     # 输出 pose 时间序列的数组
     print 'the pose_time_array:', pose_time_array
 
@@ -55,6 +58,7 @@ def sync_timeline(wifi_file, pose_file, pose_out, wifi_out, is_debuge=False):
         #根据得到的序号i分别输出 pose，和wifi
         pose_out_tmp = pose_list[time_diff_min_index]
         pose_out_tmp = pose_out_tmp.split(' ')
+        print len(pose_out_tmp)
         pose_out.write(str(pose_out_tmp[1]) + ' ' + str(pose_out_tmp[2]))
         pose_out.write('\n')
         for i in range(1, len(wifi_data)):

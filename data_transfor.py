@@ -195,6 +195,7 @@ if __name__ == '__main__':
     print '输入laser保存pose 的文件'
     laser_file = raw_input()
     laser_file = data_dir + laser_file
+    print laser_file
     print '输入保存wifi信号的文件'
     wifi_file = raw_input()
     wifi_file = data_dir + wifi_file

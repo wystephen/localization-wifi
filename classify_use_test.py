@@ -15,7 +15,7 @@ import data_transfor
 
 def bayes_quick(data, label):
     clf = GaussianNB()
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0
@@ -34,7 +34,7 @@ def bayes_quick(data, label):
 
 def knn_quick(data, label):
     clf = KNeighborsClassifier(n_neighbors=5)
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0
@@ -54,7 +54,7 @@ def knn_quick(data, label):
 def adaboost_quick(data, label):
     clf = AdaBoostClassifier(DecisionTreeClassifier(max_depth=100),n_estimators=150, learning_rate=1)
     #clf = AdaBoostClassifier(LDA(),n_estimators=140, learning_rate=1)
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0
@@ -73,7 +73,7 @@ def adaboost_quick(data, label):
 
 def onevsrest_quick(data, label):
     clf = OneVsRestClassifier(svm.SVC(kernel = 'linear'))
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0
@@ -113,7 +113,7 @@ def onevsone_quick(data,label):
 
 def LDA_quick(data, label):
     clf = LDA()
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0
@@ -132,7 +132,7 @@ def LDA_quick(data, label):
 
 def randomforest_quick(data, label):
     clf = RandomForestClassifier(n_estimators=10)
-    print 'data',data
+    #print 'data',data
     clf.fit(data,label) #训练
 
     err = 0

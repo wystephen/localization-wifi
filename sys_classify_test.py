@@ -122,6 +122,9 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     plt.plot(error, 'o')
 
 
+    #数据保存
+
+
     #out_wifi_test = numpy.loadtxt('out_wifi.txt',dtype='int')
 
     out_wifi_file = open('out_wifi.txt','r')
@@ -139,6 +142,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     out_wifi_test = data_preprocessing.data_transform(data_preprocessing.rss_dis(data_preprocessing.pre_process(out_wifi_test[:,1:len(out_wifi_test)])))
     plt.figure('test_wifi_out')
     plt.plot(clf.predict(out_wifi_test))
+    plt.show()
 
 
 

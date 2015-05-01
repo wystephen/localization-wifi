@@ -51,7 +51,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
 
     #print K_means_label
     #支持向量机的语句，过得去 0.6（5m），0.1-0.2（5-7m）--disige--ok---第五个化成 rbf--效果不好
-    #ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#, kernel='linear')
+    ans, label, clf = classify_use_test.svm_quick(half_wifi, K_means_label)#), kernel='linear')
     #随机森林，有问题？
     #ans, label, clf = classify_use_test.randomforest_quick(half_wifi_test,K_means_label)
     #LDA 效果很差。
@@ -63,7 +63,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     #adaboost--disange--不太稳定。
     #ans, label, clf = classify_use_test.adaboost_quick(half_wifi,K_means_label)
     #knn 不错 ， 同 支持向量机
-    ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
+    #ans, label, clf = classify_use_test.knn_quick(half_wifi, K_means_label)
     #bayes--disange--效果差
     #ans, label, clf = classify_use_test.bayes_quick(half_wifi,K_means_label)
 
@@ -118,9 +118,29 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test):
     big_acc = error_pose_num*1.0/(len(error))
     print 'small:', small_error, 'biggest:', biggest_error, 'acc:', small_error * 1.0 / (len(error) )
     print 'biggest acc:', big_acc + small_acc
-    plt.figure(4)
+    plt.figure('error_show')
     plt.plot(error, 'o')
-    plt.grid(4)
+
+
+    #out_wifi_test = numpy.loadtxt('out_wifi.txt',dtype='int')
+
+    out_wifi_file = open('out_wifi.txt','r')
+    out_wifi_file = out_wifi_file.readlines()
+    out_wifi_test = numpy.zeros([len(out_wifi_file),62])
+    for i in range(len(out_wifi_file)):
+        wifi_line = out_wifi_file[i]
+        if len(wifi_line) > 10:
+            wifi_line = wifi_line.split(' ')
+            for j in range(1,len(wifi_line)-1):
+                out_wifi_test[i,j] = float(wifi_line[j])
+
+
+
+    out_wifi_test = data_preprocessing.data_transform(data_preprocessing.rss_dis(data_preprocessing.pre_process(out_wifi_test[:,1:len(out_wifi_test)])))
+    plt.figure('test_wifi_out')
+    plt.plot(clf.predict(out_wifi_test))
+
+
 
     #plt.figure(5)
     #plt.plot(error_pose[:, 0], error_pose[:, 1], 'o')
@@ -164,4 +184,5 @@ if __name__ == '__main__':
     plt.figure('all_right_acc')
     plt.plot(acc_save[:,0],'ro')
     plt.plot(acc_save[:,1],'bo')
+    plt.grid()
     plt.show()

@@ -32,7 +32,7 @@ class multilayer:
         for i in range(len(data[:,1])):
             type_sum[self.k_means_clf.predict(data[i,:])] +=1
         print type_sum
-        clf_te = svm.SVC(kernel = 'linear', probability = True)
+        clf_te = svm.SVC(kernel = 'linear')#, probability = True)
         clf_te.fit(data,label)
         print 'clf_te:', clf_te
         for i in range(0,type_num):

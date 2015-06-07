@@ -3,6 +3,8 @@ __author__ = 'steve'
 import numpy
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import svm
+from sklearn.svm import NuSVC
+from sklearn import svm
 from sklearn.lda import LDA
 from sklearn.ensemble import AdaBoostClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -12,6 +14,8 @@ import matplotlib.pyplot as plt
 from sklearn.multiclass import OneVsRestClassifier
 from sklearn.multiclass import OneVsOneClassifier
 import data_transfor
+
+import eknn
 
 def bayes_quick(data, label):
     clf = GaussianNB()
@@ -33,7 +37,9 @@ def bayes_quick(data, label):
     return ans, label, clf
 
 def knn_quick(data, label):
-    clf = KNeighborsClassifier(n_neighbors=5)
+    #clf = eknn.eknn(n_neighbors=4)
+    #print 'use own eknn'
+    clf = KNeighborsClassifier(n_neighbors=3)
     #print 'data',data
     clf.fit(data,label) #训练
 
@@ -52,7 +58,8 @@ def knn_quick(data, label):
     return ans, label, clf
 
 def adaboost_quick(data, label):
-    clf = AdaBoostClassifier(DecisionTreeClassifier(max_depth=100),n_estimators=150, learning_rate=1)
+    clf = AdaBoostClassifier(svm.SVC(kernel = 'linear',probability = True),n_estimators=20, learning_rate=1)
+    #clf = AdaBoostClassifier()
     #clf = AdaBoostClassifier(LDA(),n_estimators=140, learning_rate=1)
     #print 'data',data
     clf.fit(data,label) #训练
@@ -158,7 +165,7 @@ def svm_quick(data, label, kernel = 'linear'):
     :param kernel:
     :return:
     '''
-    clf = svm.SVC(kernel = kernel, probability = True)
+    clf = svm.SVC()#kernel = kernel, probability = True,nu=0.3)
 
     clf.fit(data, label)  # 训练
 

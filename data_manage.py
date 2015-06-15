@@ -28,27 +28,27 @@ class data_manage:
         if os.path.isdir(self.dir):
             print os.listdir(self.dir)
             file_list = os.listdir(self.dir)
-            #self.pose = list()
-            #self.wifi = list()
+            self.pose = list()
+            self.wifi = list()
 
-           # self.pose.append(numpy.loadtxt('data_save/20153141231end_pose.txt') )
-           # self.pose.append(numpy.loadtxt('data_save/20153221517end_pose.txt') )
-           # self.pose.append(numpy.loadtxt('data_save/2015325155end_pose.txt')  )
-           # self.pose.append(numpy.loadtxt('data_save/20153141218end_pose.txt') )
-           # self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
-           # self.pose.append(numpy.loadtxt('data_save/2015331116end_pose.txt'))
-           # self.pose.append(numpy.loadtxt('data_save/20153311044end_pose.txt'))
-           # self.pose.append(numpy.loadtxt('data_save/20153311115end_pose.txt'))
-           #
-           #
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015325155end_wifi.txt'))  )
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015331116end_wifi.txt')))
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
-           # self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
+            #self.pose.append(numpy.loadtxt('data_save/20153141231end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/20153221517end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/2015325155end_pose.txt')  )
+            #self.pose.append(numpy.loadtxt('data_save/20153141218end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/20153221527end_pose.txt') )
+            #self.pose.append(numpy.loadtxt('data_save/2015331116end_pose.txt'))
+            #self.pose.append(numpy.loadtxt('data_save/20153311044end_pose.txt'))
+            #self.pose.append(numpy.loadtxt('data_save/20153311115end_pose.txt'))
+            #
+            #
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141231end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221517end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015325155end_wifi.txt'))  )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153141218end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153221527end_wifi.txt')) )
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/2015331116end_wifi.txt')))
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311044end_wifi.txt')))
+            #self.wifi.append(data_preprocessing.pre_process(numpy.loadtxt('data_save/20153311115end_wifi.txt')))
 
 
 #           新数据

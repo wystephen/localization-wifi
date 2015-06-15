@@ -16,6 +16,9 @@ import own_knn
 
 import D_value_class
 
+import timer
+import time
+
 
 def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test,iteartion):
 
@@ -47,6 +50,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test,iteartion):
                 K_means_label[i] = j
 
     print 'kmeans end'
+    timestart = time.clock()
     #numpy.savetxt('save_pose_label_new',K_means_label)
     #numpy.savetxt('save_wifi_label_new',half_wifi)
 
@@ -76,7 +80,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test,iteartion):
     #clf = multi_layer_class.multilayer(half_wifi,K_means_label,type_num=10)
     print 'train over'
 
-
+    timetrain = time.clock()
     plt.figure(3)
     landmark = pose_label
     #把自然聚类的每个类别第一个
@@ -146,7 +150,8 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test,iteartion):
     plt.figure('test_wifi_out')
     plt.plot(clf.predict(out_wifi_test))
 
-
+    timepre = time.clock()
+    print 'train_time:',timetrain - timestart,'predict_time:',timepre-timetrain
 
     #plt.figure(5)
     #plt.plot(error_pose[:, 0], error_pose[:, 1], 'o')
@@ -172,6 +177,8 @@ if __name__ == '__main__':
     #        print acc_save
 
     #完整测试代码···
+    import os
+    time1 = time.clock()
     for i in range(5):
         #test_pose, test_wifi, pose, wifi = data.get_full_test_data(i,7)
         pose, wifi, test_pose, test_wifi = data.get_full_test_data(i,5)
@@ -186,7 +193,8 @@ if __name__ == '__main__':
     #pose, wifi, test_pose, test_wifi = data.get_full_test_data(7,4)
     #print 'pose',len(pose),'test_pose',len(test_pose)
     #acc_save[1,0], acc_save[1,1] = pose_test_func(pose,wifi,test_pose,test_wifi)
-
+    time2 = time.clock()
+    print 'time',time1,time2,time2-time1
     print acc_save
     plt.figure('all_right_acc')
     plt.plot(acc_save[:,0],'ro')

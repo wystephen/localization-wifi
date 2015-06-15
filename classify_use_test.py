@@ -37,9 +37,9 @@ def bayes_quick(data, label):
     return ans, label, clf
 
 def knn_quick(data, label):
-    #clf = eknn.eknn(n_neighbors=4)
-    #print 'use own eknn'
-    clf = KNeighborsClassifier(n_neighbors=3)
+    clf = eknn.eknn(n_neighbors=3)
+    #print 'use own eknn13'
+    #clf = KNeighborsClassifier(n_neighbors=1)
     #print 'data',data
     clf.fit(data,label) #训练
 

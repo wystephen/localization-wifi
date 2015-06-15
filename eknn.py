@@ -18,10 +18,19 @@ class eknn:
         self.save_out = Y
 
     def distance(self,x1,x2):
-        x1=(x1-x2)**2
-        dis = sum(x1)
-        dis = dis ** 0.5
+        #x1=(x1-x2)**2
+        #dis = sum(x1)
+        #dis = dis ** 0.5
+        #return dis
+        up = 0
+        up = np.sum(x1*x2)
+
+
+        dis = -up/np.sum(x1)/np.sum(x2)
+
+
         return dis
+
 
 
 

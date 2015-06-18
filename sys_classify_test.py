@@ -129,7 +129,7 @@ def pose_test_func(half_pose,half_wifi,half_pose_test,half_wifi_test,iteartion):
     print 'biggest acc:', big_acc + small_acc
     plt.figure('error_show')
     plt.plot(error, 'o')
-    numpy.savetxt(str(iteartion)+'err_txt_o',error)
+    numpy.savetxt(str(iteartion)+'sklearn_knn_err_txt_o',error)
 
 
     #out_wifi_test = numpy.loadtxt('out_wifi.txt',dtype='int')

@@ -5,8 +5,11 @@ import scipy as sp
 import matplotlib.pyplot as plt
 import os
 
-import data_manage
+import random
 
+import data_manage
+import time
+import timer
 def distance(x1,x2):
     x1=(x1-x2)**2
     dis = sum(x1)
@@ -133,6 +136,7 @@ class newKNN:
         return out_Y
 
     def cal_prob(self,near_Y,x):
+
         prob = 1.0
         for i in range(len(near_Y)):
             #print near_Y,'near_y'
@@ -141,7 +145,8 @@ class newKNN:
         return prob
 
 
-    def sir_predict(self,X):
+    def sir_predict(self,X,p_num):
+        random.seed()#初始化随机种子
         out_Y = list()
 
         last_y_list = list()
@@ -154,6 +159,8 @@ class newKNN:
         last_y_p.append(1)
         last_y_p.append(1)
         last_y = 0
+        #p_num =30
+        print 'p_num5:',p_num
         for index in range(len(X)):
             near_Y,near_Y_dis = self.search(X[index,:])
             #print near_Y
@@ -162,9 +169,15 @@ class newKNN:
             #矫正阶段~修正权值
             #每个原来的种子循环一次
             for i in range(len(last_y_list)):
-                #原来每个种子撒三个种子
-                for step in range(0,8):
-                    step = step -4
+                #原来每个种子撒p_num个种子
+                for step in range(0,p_num):
+                    #种子改成高斯分布随机撒看看
+                    s = 1000
+                    while s < -30 or s > 30:
+                        s = random.gauss(0,5)
+                        s = int(s)
+                    step = step -int(p_num/2.0)
+                    step = s
                     if (last_y_list[i]+step > np.max(self.save_out)):
                         last_y_list = last_y_list
                         step = 0
@@ -173,7 +186,9 @@ class newKNN:
                         step = 0
 
                     y_list_tmp.append(last_y_list[i]+step)
-                    y_p_tmp.append(self.cal_prob(near_Y,last_y_list[i]+step))#*last_y_p[i])
+                    y_p_tmp.append(self.cal_prob(near_Y,last_y_list[i]+step)*\
+                                   1.0 * 1.5**(-abs((step))/5.0))#*last_y_p[i])
+
             #对新的种子排序 重采样
             sor =np.argsort(np.asarray(y_p_tmp))
             y_p_tmp = np.asarray(y_p_tmp)
@@ -181,15 +196,15 @@ class newKNN:
             last_y_list = list()
             last_y_p = list()
             y_p_tmp = y_p_tmp/1.0/sum(y_p_tmp)
-            for best_i in range(1,5,1):
+            for best_i in range(1,int(p_num/2.0),1):
                 last_y_list.append(y_list_tmp[sor[-best_i]])
                 last_y_p.append(y_p_tmp[sor[-best_i]])
+
             last_y= y_list_tmp[sor[-1]]
+
             #print last_y
+
             out_Y.append(last_y)
-
-
-
         return out_Y
 
 def err(out_Y,pose,landmark):
@@ -202,21 +217,25 @@ def err(out_Y,pose,landmark):
 if __name__ == '__main__':
     print 'new prob for every one'
     data = data_manage.data_manage()
+    err5 = list()
+    err3 = list()
+    start_time = time.clock()
     for kk in range(5):
+        kk = 3
         pose, wifi, test_pose, test_wifi = data.get_full_test_data(kk,5)
         #先用pose wifi 作为训练，test_pose 作为测试
         print 'data_inpu_end'
 
         label,landmark = pose2label(pose)
         test_label,landmark = pose2label(test_pose)
-
-        KNN = newKNN()
+        n_ne=3
+        KNN = newKNN(n_neighbors=n_ne)
 
         KNN.fit(wifi,label)
         #KNN.prob_get()
 
         #out_Y=KNN.predict(test_wifi)
-        out_Y = KNN.sir_predict(test_wifi)
+        out_Y = KNN.sir_predict(test_wifi,50)
 
         the_err = err(out_Y,test_pose,landmark)
 
@@ -233,11 +252,15 @@ if __name__ == '__main__':
             err_step.append(i)
             err_all.append(count/1.0/len(the_err))
             if i == 5.0:
+                err5.append(count/1.0/len(the_err))
                 print '5.0:',count/1.0/len(the_err)
             if i==3.0:
+                err3.append(count/1.0/len(the_err))
                 print '3.0:',count/1.0/len(the_err)
         err_step = np.asarray(err_step)
         err_all = np.asarray(err_all)
+        np.savetxt('err_step',err_step)
+        np.savetxt('err_all_prob'+str(kk),err_all)
         plt.figure(2)
         plt.grid()
         plt.plot(err_step,err_all)
@@ -247,8 +270,16 @@ if __name__ == '__main__':
         plt.figure(1)
         plt.plot(the_err)
         plt.grid()
-    plt.show()
 
+    err5= np.asarray(err5)
+    err3 = np.asarray(err3)
+    print n_ne
+    for i in range(len(err5)):
+        print '[',err3[i],',',err5[i],']'
+    end_time = time.clock()
+    print 'start:',start_time,'end:',end_time
+    print 'use time:',end_time -start_time
+    plt.show()
 
 
 

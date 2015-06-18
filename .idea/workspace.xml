@@ -2,17 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0f04538-5c36-4bb2-ae3e-b07ede1a6f9e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/dynamaic_analysis.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/landmark_analysis.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/new_knn.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_praticle_num.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/0err_txt_o" afterPath="$PROJECT_DIR$/0err_txt_o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/1err_txt_o" afterPath="$PROJECT_DIR$/1err_txt_o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/2err_txt_o" afterPath="$PROJECT_DIR$/2err_txt_o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/3err_txt_o" afterPath="$PROJECT_DIR$/3err_txt_o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/4err_txt_o" afterPath="$PROJECT_DIR$/4err_txt_o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/classify_use_test.py" afterPath="$PROJECT_DIR$/classify_use_test.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data_manage.py" afterPath="$PROJECT_DIR$/data_manage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/eknn.py" afterPath="$PROJECT_DIR$/eknn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/new_knn.py" afterPath="$PROJECT_DIR$/new_knn.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_err0" afterPath="$PROJECT_DIR$/prob_err0" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_err1" afterPath="$PROJECT_DIR$/prob_err1" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_err2" afterPath="$PROJECT_DIR$/prob_err2" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_err3" afterPath="$PROJECT_DIR$/prob_err3" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_err4" afterPath="$PROJECT_DIR$/prob_err4" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/prob_m" afterPath="$PROJECT_DIR$/prob_m" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/sys_classify_test.py" afterPath="$PROJECT_DIR$/sys_classify_test.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -39,33 +42,11 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="dynamaic_analysis.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/dynamaic_analysis.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1160">
-                    <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="landmark_analysis.py" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/landmark_analysis.py">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="400" max-vertical-offset="1120">
-                    <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-                    <folding>
-                      <element signature="e#53#71#0" expanded="true" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
             <file leaf-file-name="new_knn.py" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/new_knn.py">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.08739366" vertical-offset="3567" max-vertical-offset="5860">
-                    <caret line="184" column="60" selection-start-line="184" selection-start-column="60" selection-end-line="184" selection-end-column="60" />
+                  <state vertical-scroll-proportion="0.105913505" vertical-offset="4080" max-vertical-offset="6480">
+                    <caret line="210" column="16" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
                     <folding>
                       <element signature="e#52#70#0" expanded="true" />
                     </folding>
@@ -84,33 +65,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="sys_classify_test.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
+      <file leaf-file-name="test_praticle_num.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test_praticle_num.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="4180">
-              <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+            <state vertical-scroll-proportion="1.4569536" vertical-offset="0" max-vertical-offset="340">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
               <folding>
-                <element signature="e#53#65#0" expanded="true" />
+                <element signature="e#53#71#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="data_manage.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="data_manage.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/data_manage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.3218085" vertical-offset="2383" max-vertical-offset="3060">
-              <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="npyio.py" pinned="false" current-in-tab="false">
-        <entry file="file://C:/Python27/Lib/site-packages/numpy/lib/npyio.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="13696" max-vertical-offset="37100">
-              <caret line="714" column="0" selection-start-line="714" selection-start-column="0" selection-end-line="714" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="3060">
+              <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -142,7 +113,17 @@
         <entry file="file://$PROJECT_DIR$/classify_use_test.py">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="4960">
-              <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
+              <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="unit_to_rel_ann.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/unit_to_rel_ann.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1720">
+              <caret line="41" column="25" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -160,7 +141,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/get_mac_list.py" />
         <option value="$PROJECT_DIR$/time_transform.py" />
         <option value="$PROJECT_DIR$/new_feature_svm.py" />
         <option value="$PROJECT_DIR$/README.md" />
@@ -203,14 +183,15 @@
         <option value="$PROJECT_DIR$/multi_layer_class.py" />
         <option value="$PROJECT_DIR$/own_knn.py" />
         <option value="C:/Python27/Lib/site-packages/sklearn/neighbors/classification.py" />
-        <option value="$PROJECT_DIR$/classify_use_test.py" />
-        <option value="$PROJECT_DIR$/sys_classify_test.py" />
         <option value="$PROJECT_DIR$/eknn.py" />
         <option value="$PROJECT_DIR$/dynamaic_analysis.py" />
         <option value="$PROJECT_DIR$/landmark_analysis.py" />
         <option value="$PROJECT_DIR$/data_manage.py" />
-        <option value="$PROJECT_DIR$/new_knn.py" />
         <option value="E:/输出数据/data_transfor.py" />
+        <option value="$PROJECT_DIR$/test_praticle_num.py" />
+        <option value="$PROJECT_DIR$/classify_use_test.py" />
+        <option value="$PROJECT_DIR$/sys_classify_test.py" />
+        <option value="$PROJECT_DIR$/new_knn.py" />
       </list>
     </option>
   </component>
@@ -371,6 +352,25 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="localization-wifi" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/landmark_analysis.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="data_manage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="localization-wifi" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_manage.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <RunnerSettings RunnerId="PythonRunner" />
@@ -657,7 +657,7 @@
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
     </configuration>
-    <list size="12">
+    <list size="13">
       <item index="0" class="java.lang.String" itemvalue="Python.new_knn" />
       <item index="1" class="java.lang.String" itemvalue="Python.choice_regular" />
       <item index="2" class="java.lang.String" itemvalue="Python.data_view" />
@@ -670,13 +670,15 @@
       <item index="9" class="java.lang.String" itemvalue="Python.eknn" />
       <item index="10" class="java.lang.String" itemvalue="Python.dynamaic_analysis" />
       <item index="11" class="java.lang.String" itemvalue="Python.landmark_analysis" />
+      <item index="12" class="java.lang.String" itemvalue="Python.data_manage" />
     </list>
     <recent_temporary>
-      <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Python.landmark_analysis" />
-        <item index="1" class="java.lang.String" itemvalue="Python.dynamaic_analysis" />
-        <item index="2" class="java.lang.String" itemvalue="Python.eknn" />
-        <item index="3" class="java.lang.String" itemvalue="Python.classify_use_test" />
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Python.data_manage" />
+        <item index="1" class="java.lang.String" itemvalue="Python.landmark_analysis" />
+        <item index="2" class="java.lang.String" itemvalue="Python.dynamaic_analysis" />
+        <item index="3" class="java.lang.String" itemvalue="Python.eknn" />
+        <item index="4" class="java.lang.String" itemvalue="Python.classify_use_test" />
       </list>
     </recent_temporary>
   </component>
@@ -782,7 +784,7 @@
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32650074" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280255" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4070278" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.7364568" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2926024" sideWeight="0.48140043" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26754385" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20123361" sideWeight="0.50119907" order="2" side_tool="true" content_ui="tabs" />
@@ -861,23 +863,8 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="python-line">
           <url>file://$PROJECT_DIR$/new_knn.py</url>
-          <line>137</line>
+          <line>141</line>
           <option name="timeStamp" value="47" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/new_knn.py</url>
-          <line>175</line>
-          <option name="timeStamp" value="52" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/new_knn.py</url>
-          <line>177</line>
-          <option name="timeStamp" value="53" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="python-line">
-          <url>file://$PROJECT_DIR$/new_knn.py</url>
-          <line>167</line>
-          <option name="timeStamp" value="54" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -901,13 +888,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data_save/20153141231end_pose.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="191900">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_cmd5">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="260">
@@ -1048,13 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/unit_to_rel_ann.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="660" max-vertical-offset="1720">
-          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/n1-13_46/out_pose_laser.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5838641" vertical-offset="286845" max-vertical-offset="287500">
@@ -1189,42 +1162,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/dynamaic_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1160">
-          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/landmark_analysis.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1120">
-          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-          <folding>
-            <element signature="e#53#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1523" max-vertical-offset="4180">
-          <caret line="84" column="25" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
-          <folding>
-            <element signature="e#53#65#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Python27/Lib/site-packages/numpy/lib/npyio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="13696" max-vertical-offset="37100">
-          <caret line="714" column="0" selection-start-line="714" selection-start-column="0" selection-end-line="714" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/eknn.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="666" max-vertical-offset="1860">
@@ -1243,37 +1180,86 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/classify_use_test.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="4960">
-          <caret line="44" column="0" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/new_knn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08739366" vertical-offset="3567" max-vertical-offset="5860">
-          <caret line="184" column="60" selection-start-line="184" selection-start-column="60" selection-end-line="184" selection-end-column="60" />
-          <folding>
-            <element signature="e#52#70#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://E:/输出数据/data_transfor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3723404" vertical-offset="360" max-vertical-offset="740">
           <caret line="27" column="19" selection-start-line="27" selection-start-column="19" selection-end-line="28" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dynamaic_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="20" max-vertical-offset="1160">
+          <caret line="4" column="18" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/landmark_analysis.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1120">
+          <caret line="20" column="26" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://C:/Python27/Lib/site-packages/numpy/lib/npyio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48806366" vertical-offset="13696" max-vertical-offset="37100">
+          <caret line="714" column="0" selection-start-line="714" selection-start-column="0" selection-end-line="714" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_manage.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.3218085" vertical-offset="2383" max-vertical-offset="3060">
-          <caret line="153" column="0" selection-start-line="153" selection-start-column="0" selection-end-line="153" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1963" max-vertical-offset="3060">
+          <caret line="126" column="35" selection-start-line="126" selection-start-column="35" selection-end-line="126" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classify_use_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="332" max-vertical-offset="4960">
+          <caret line="45" column="11" selection-start-line="45" selection-start-column="11" selection-end-line="45" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sys_classify_test.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6785714" vertical-offset="3060" max-vertical-offset="4180">
+          <caret line="191" column="11" selection-start-line="191" selection-start-column="11" selection-end-line="191" selection-end-column="11" />
+          <folding>
+            <element signature="e#53#65#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/unit_to_rel_ann.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="328" max-vertical-offset="1720">
+          <caret line="41" column="25" selection-start-line="40" selection-start-column="0" selection-end-line="41" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_praticle_num.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4569536" vertical-offset="0" max-vertical-offset="340">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding>
+            <element signature="e#53#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/new_knn.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.105913505" vertical-offset="4080" max-vertical-offset="6480">
+          <caret line="210" column="16" selection-start-line="210" selection-start-column="16" selection-end-line="210" selection-end-column="16" />
+          <folding>
+            <element signature="e#52#70#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

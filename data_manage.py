@@ -124,7 +124,8 @@ class data_manage:
         else:
             sum = len(self.wifi)
             tmp_pose = self.pose[0]
-            tmp_wifi = self.wifi[0]
+            tmp_wifi = self.wifi[0]'' \
+                                   ''
             for i in range(sum):
                 if i == index or i > full_num :
                     continue
